@@ -1,0 +1,23 @@
+#!/bin/csh
+
+set outdir = "libAdditions"
+set outfile1 = libAdditions-iPad.a
+set outfile2 = libAdditions-iPhone.a
+
+if ( ! -e "$outdir" ) then
+	mkdir $outdir
+endif
+rm $outdir/*
+
+xcodebuild -sdk iphoneos4.2 -project AdditionsLib.xcodeproj -target AdditionsLib-iPad
+xcodebuild -sdk iphonesimulator4.2 -project AdditionsLib.xcodeproj -target AdditionsLib-iPad
+
+xcodebuild -sdk iphoneos4.2 -project AdditionsLib.xcodeproj -target AdditionsLib-iPhone
+xcodebuild -sdk iphonesimulator4.2 -project AdditionsLib.xcodeproj -target AdditionsLib-iPhone
+
+lipo -create build/Release-iphoneos/$outfile1 build/Release-iphonesimulator/$outfile1 -output "$outdir/$outfile1"
+lipo -create build/Release-iphoneos/$outfile2 build/Release-iphonesimulator/$outfile2 -output "$outdir/$outfile2"
+
+find . -name "*.h" -exec cp {} "$outdir" \;
+
+echo Library in $outdir
