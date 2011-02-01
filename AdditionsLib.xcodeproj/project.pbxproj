@@ -73,6 +73,10 @@
 		E4A7A87A11FA0219008FAF55 /* UIScrollViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A86711FA0219008FAF55 /* UIScrollViewAdditions.h */; };
 		E4A7A87B11FA0219008FAF55 /* UIViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A86811FA0219008FAF55 /* UIViewAdditions.h */; };
 		E4A7A87E11FA028A008FAF55 /* LibAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A87D11FA028A008FAF55 /* LibAdditions.h */; };
+		E4AA8F1212F861C700D08289 /* NSCoderGSA.h in Headers */ = {isa = PBXBuildFile; fileRef = E4AA8F1012F861C700D08289 /* NSCoderGSA.h */; };
+		E4AA8F1312F861C700D08289 /* NSCoderGSA.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AA8F1112F861C700D08289 /* NSCoderGSA.m */; };
+		E4AA8F1412F861C700D08289 /* NSCoderGSA.h in Headers */ = {isa = PBXBuildFile; fileRef = E4AA8F1012F861C700D08289 /* NSCoderGSA.h */; };
+		E4AA8F1512F861C700D08289 /* NSCoderGSA.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AA8F1112F861C700D08289 /* NSCoderGSA.m */; };
 		E4CD2C0711F9FDB200D6C250 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BE411F9FDB200D6C250 /* Alert.m */; };
 		E4CD2C0A11F9FDB200D6C250 /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BE711F9FDB200D6C250 /* NSDateAdditions.m */; };
 		E4CD2C0C11F9FDB200D6C250 /* NSDictionaryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BE911F9FDB200D6C250 /* NSDictionaryAdditions.m */; };
@@ -125,6 +129,8 @@
 		E4A7A86711FA0219008FAF55 /* UIScrollViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScrollViewAdditions.h; sourceTree = "<group>"; };
 		E4A7A86811FA0219008FAF55 /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
 		E4A7A87D11FA028A008FAF55 /* LibAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibAdditions.h; sourceTree = "<group>"; };
+		E4AA8F1012F861C700D08289 /* NSCoderGSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCoderGSA.h; sourceTree = "<group>"; };
+		E4AA8F1112F861C700D08289 /* NSCoderGSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCoderGSA.m; sourceTree = "<group>"; };
 		E4CD2BE411F9FDB200D6C250 /* Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alert.m; sourceTree = SOURCE_ROOT; };
 		E4CD2BE711F9FDB200D6C250 /* NSDateAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateAdditions.m; sourceTree = SOURCE_ROOT; };
 		E4CD2BE911F9FDB200D6C250 /* NSDictionaryAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryAdditions.m; sourceTree = SOURCE_ROOT; };
@@ -205,6 +211,8 @@
 				E4D10E891200A88800989268 /* uncaughtExceptionHandler.m */,
 				E491C4AF1269A126001FF7F1 /* UIColorLibraryAdditions.h */,
 				E491C4B01269A126001FF7F1 /* UIColorLibraryAdditions.m */,
+				E4AA8F1012F861C700D08289 /* NSCoderGSA.h */,
+				E4AA8F1112F861C700D08289 /* NSCoderGSA.m */,
 			);
 			name = Additions;
 			sourceTree = "<group>";
@@ -306,6 +314,7 @@
 				E45ABBDF12393221002E9A6C /* LibAdditions-iPad.h in Headers */,
 				E491C4B11269A126001FF7F1 /* UIColorLibraryAdditions.h in Headers */,
 				E4583AF412917024007F0577 /* dispatchShortcuts.h in Headers */,
+				E4AA8F1412F861C700D08289 /* NSCoderGSA.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +346,7 @@
 				E45ABC0F12393265002E9A6C /* uncaughtExceptionHandler.h in Headers */,
 				E45ABC1012393265002E9A6C /* LibAdditions-iPad.h in Headers */,
 				E4583AF512917024007F0577 /* dispatchShortcuts.h in Headers */,
+				E4AA8F1212F861C700D08289 /* NSCoderGSA.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +438,7 @@
 				E4D10E861200A85200989268 /* GTMUIViewTree.m in Sources */,
 				E4D10E8B1200A88800989268 /* uncaughtExceptionHandler.m in Sources */,
 				E491C4B21269A126001FF7F1 /* UIColorLibraryAdditions.m in Sources */,
+				E4AA8F1512F861C700D08289 /* NSCoderGSA.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +465,7 @@
 				E45ABBF512393265002E9A6C /* GTMUIViewTree.m in Sources */,
 				E45ABBF612393265002E9A6C /* uncaughtExceptionHandler.m in Sources */,
 				E491C5111269A7A0001FF7F1 /* UIColorLibraryAdditions.m in Sources */,
+				E4AA8F1312F861C700D08289 /* NSCoderGSA.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,7 +487,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -490,7 +502,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
