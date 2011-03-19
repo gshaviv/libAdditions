@@ -7,4 +7,4 @@
  *
  */
 
-extern void uncaughtExceptionHandler(NSException *exception);
+extern void InstallUncaughtExceptionHandler();
