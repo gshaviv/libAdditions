@@ -9,11 +9,11 @@ if ( ! -e "$outdir" ) then
 endif
 rm $outdir/*
 
-xcodebuild -sdk iphoneos4.2 -project AdditionsLib.xcodeproj -target AdditionsLib-iPad
-xcodebuild -sdk iphonesimulator4.2 -project AdditionsLib.xcodeproj -target AdditionsLib-iPad
+xcodebuild -sdk iphoneos4.3 -project AdditionsLib.xcodeproj -target AdditionsLib-iPad
+xcodebuild -sdk iphonesimulator4.3 -project AdditionsLib.xcodeproj -target AdditionsLib-iPad
 
-xcodebuild -sdk iphoneos4.2 -project AdditionsLib.xcodeproj -target AdditionsLib-iPhone
-xcodebuild -sdk iphonesimulator4.2 -project AdditionsLib.xcodeproj -target AdditionsLib-iPhone
+xcodebuild -sdk iphoneos4.3 -project AdditionsLib.xcodeproj -target AdditionsLib-iPhone
+xcodebuild -sdk iphonesimulator4.3 -project AdditionsLib.xcodeproj -target AdditionsLib-iPhone
 
 lipo -create build/Release-iphoneos/$outfile1 build/Release-iphonesimulator/$outfile1 -output "$outdir/$outfile1"
 lipo -create build/Release-iphoneos/$outfile2 build/Release-iphonesimulator/$outfile2 -output "$outdir/$outfile2"

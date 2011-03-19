@@ -9,4 +9,4 @@
 #import <Foundation/Foundation.h>
 
 
-void Swizzle(Class c, SEL orig, SEL new);
+void Swizzle(Class c, SEL orig, SEL newSel);
