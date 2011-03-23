@@ -17,6 +17,7 @@
 
 
 void uncaughtExceptionHandler(NSException *exception) {
+    NSAutoreleasePool *pool = [NSAutoreleasePool new];
 	NSString *fullBacktrace = GTMStackTraceFromException(exception);
 	NSSetUncaughtExceptionHandler(NULL);
 	signal(SIGABRT, SIG_DFL);
@@ -56,10 +57,12 @@ void uncaughtExceptionHandler(NSException *exception) {
     @catch (NSException *exception) {
         NSLog(@"whoa!  could not handle uncaught exception! %@",fullBacktrace);
     }
+    [pool release];
 }
 
 void SignalHandler(int signalNo)
 {
+    NSAutoreleasePool *pool = [NSAutoreleasePool new];
     NSString *fullBacktrace = GTMStackTrace();
 	NSSetUncaughtExceptionHandler(NULL);
 	signal(SIGABRT, SIG_DFL);
@@ -104,6 +107,7 @@ void SignalHandler(int signalNo)
     @catch (NSException *exception) {
         NSLog(@"whoa!  could not handle uncaught exception! %@",fullBacktrace);
     }
+    [pool release];
 }
 
 void InstallUncaughtExceptionHandler()
