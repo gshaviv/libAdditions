@@ -207,11 +207,8 @@
 				E4CD2BFF11F9FDB200D6C250 /* UIPopoverControllerSingle.m */,
 				E4CD2C0111F9FDB200D6C250 /* UIScrollViewAdditions.m */,
 				E4CD2C0311F9FDB200D6C250 /* UIViewAdditions.m */,
-				E4D10E881200A88800989268 /* uncaughtExceptionHandler.h */,
 				E4D10E891200A88800989268 /* uncaughtExceptionHandler.m */,
-				E491C4AF1269A126001FF7F1 /* UIColorLibraryAdditions.h */,
 				E491C4B01269A126001FF7F1 /* UIColorLibraryAdditions.m */,
-				E4AA8F1012F861C700D08289 /* NSCoderGSA.h */,
 				E4AA8F1112F861C700D08289 /* NSCoderGSA.m */,
 			);
 			name = Additions;
@@ -245,7 +242,10 @@
 		E4A7A85611FA0219008FAF55 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				E4D10E881200A88800989268 /* uncaughtExceptionHandler.h */,
 				E4A7A87D11FA028A008FAF55 /* LibAdditions.h */,
+				E491C4AF1269A126001FF7F1 /* UIColorLibraryAdditions.h */,
+				E4AA8F1012F861C700D08289 /* NSCoderGSA.h */,
 				E4A7A85711FA0219008FAF55 /* Alert.h */,
 				E4A7A85811FA0219008FAF55 /* CGGeometryAdditions.h */,
 				E4A7A85911FA0219008FAF55 /* NSDateAdditions.h */,
