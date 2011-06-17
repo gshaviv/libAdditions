@@ -60,7 +60,7 @@ void uncaughtExceptionHandler(NSException *exception) {
     [pool release];
 }
 
-void SignalHandler(int signalNo)
+static void SignalHandler(int signalNo)
 {
     NSAutoreleasePool *pool = [NSAutoreleasePool new];
     NSString *fullBacktrace = GTMStackTrace();
@@ -110,7 +110,7 @@ void SignalHandler(int signalNo)
     [pool release];
 }
 
-void InstallUncaughtExceptionHandler()
+void InstallUncaughtExceptionHandler(void)
 {
 	NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
 	signal(SIGABRT, SignalHandler);
