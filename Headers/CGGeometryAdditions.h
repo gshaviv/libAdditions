@@ -21,14 +21,9 @@ static inline CGPoint CGPointDiff(CGPoint p1, CGPoint p0) {
 	return CGPointMake(p1.x-p0.x, p1.y-p0.y);
 }
 
-static inline NSRange NSRangeMake(float location, float length) {
-    NSRange range;
-    range.location = location;
-    range.length = length;
-    return range;
-}
+#define NSRangeMake(loc,len) NSMakeRange(loc,len)
 
-static inline NSRange NSRangeMakeFromStartToEnd(float start, float end) {
+static inline NSRange NSRangeMakeFromStartToEnd(NSUInteger start, NSUInteger end) {
     NSRange range;
     range.location = start;
     range.length = end - start;
