@@ -35,3 +35,5 @@ static inline float distanceBetweenPoints(CGPoint p1, CGPoint p2) {
     float y = p1.y - p2.y;
     return sqrtf(x * x + y * y);
 }
+
+#define NSRangeEnd(r) (r.location + r.length)
