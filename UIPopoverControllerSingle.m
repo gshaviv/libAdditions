@@ -12,6 +12,7 @@
 #import "Swizzle.h"
 
 static UIPopoverController *visibleController;
+static NSMutableSet *proxies = 0;
 
 @interface ProxyDelegate : NSObject <UIPopoverControllerDelegate>
 {
@@ -58,7 +59,7 @@ static UIPopoverController *visibleController;
 - (void)oldDismissPopoverAnimated:(BOOL)animated {
 	if (visibleController) {
 		if ([self.delegate isKindOfClass:[ProxyDelegate class]]) {
-			[self.delegate autorelease];
+			[proxies removeObject:self.delegate];
 			[self oldSetDelegate:((ProxyDelegate*)self.delegate).delegate];
 		}	
 	}
@@ -82,9 +83,13 @@ static UIPopoverController *visibleController;
 	}
 	visibleController = self;
 	if (![self.delegate isKindOfClass:[ProxyDelegate class]]) {
-		ProxyDelegate *proxy = [ProxyDelegate new];
+		ProxyDelegate *proxy = [[ProxyDelegate new] autorelease];
 		proxy.delegate = self.delegate;
 		[self oldSetDelegate:proxy];
+        if (!proxies) {
+            proxies = [[NSMutableSet set] retain];
+        }
+        [proxies addObject:proxy];
 	} 
 }
 
