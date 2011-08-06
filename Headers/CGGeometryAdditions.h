@@ -36,4 +36,8 @@ static inline float distanceBetweenPoints(CGPoint p1, CGPoint p2) {
     return sqrtf(x * x + y * y);
 }
 
+static inline CGPoint CGRectGetCenter(CGRect rect) {
+    return CGPointMake(CGRectGetMidX(rect),CGRectGetMidY(rect));
+}
+
 #define NSRangeEnd(r) (r.location + r.length)
