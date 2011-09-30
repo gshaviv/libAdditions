@@ -25,6 +25,8 @@
 #import "UIColorLibraryAdditions.h"
 #import "dispatchShortcuts.h"
 #import "NSCoderGSA.h"
+#import "ObjectToDictionary.h"
 
 #define DocumentsDirectory ((NSString*)[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0])
 #define LibraryDirectory [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+#define CacheDirectory [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0]

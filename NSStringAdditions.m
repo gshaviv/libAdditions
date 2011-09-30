@@ -43,7 +43,7 @@
             [pairs setObject:value forKey:key] ;
         }
     }
-	[scanner release];
+//	[scanner release];
 
     return [NSDictionary dictionaryWithDictionary:pairs] ;
 }

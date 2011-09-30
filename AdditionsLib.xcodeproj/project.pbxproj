@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E41E710914359A7F00585262 /* ObjectToDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = E41E710714359A7F00585262 /* ObjectToDictionary.h */; };
+		E41E710A14359A7F00585262 /* ObjectToDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = E41E710714359A7F00585262 /* ObjectToDictionary.h */; };
+		E41E710B14359A7F00585262 /* ObjectToDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = E41E710814359A7F00585262 /* ObjectToDictionary.m */; };
+		E41E710C14359A7F00585262 /* ObjectToDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = E41E710814359A7F00585262 /* ObjectToDictionary.m */; };
 		E4251A0611F9ED6800A98111 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4251A0511F9ED6800A98111 /* Foundation.framework */; };
 		E4583AF412917024007F0577 /* dispatchShortcuts.h in Headers */ = {isa = PBXBuildFile; fileRef = E4583AF312917024007F0577 /* dispatchShortcuts.h */; };
 		E4583AF512917024007F0577 /* dispatchShortcuts.h in Headers */ = {isa = PBXBuildFile; fileRef = E4583AF312917024007F0577 /* dispatchShortcuts.h */; };
@@ -14,7 +18,7 @@
 		E45ABBE412393265002E9A6C /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BE411F9FDB200D6C250 /* Alert.m */; };
 		E45ABBE512393265002E9A6C /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BE711F9FDB200D6C250 /* NSDateAdditions.m */; };
 		E45ABBE612393265002E9A6C /* NSDictionaryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BE911F9FDB200D6C250 /* NSDictionaryAdditions.m */; };
-		E45ABBE712393265002E9A6C /* NSInvocationForwardedConstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BEB11F9FDB200D6C250 /* NSInvocationForwardedConstruction.m */; };
+		E45ABBE712393265002E9A6C /* NSInvocationForwardedConstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BEB11F9FDB200D6C250 /* NSInvocationForwardedConstruction.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E45ABBE812393265002E9A6C /* NSNotificationCenterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BF111F9FDB200D6C250 /* NSNotificationCenterAdditions.m */; };
 		E45ABBE912393265002E9A6C /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BF311F9FDB200D6C250 /* NSStringAdditions.m */; };
 		E45ABBEA12393265002E9A6C /* Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BF511F9FDB200D6C250 /* Swizzle.m */; };
@@ -25,9 +29,9 @@
 		E45ABBF012393265002E9A6C /* UIScrollViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2C0111F9FDB200D6C250 /* UIScrollViewAdditions.m */; };
 		E45ABBF112393265002E9A6C /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2C0311F9FDB200D6C250 /* UIViewAdditions.m */; };
 		E45ABBF212393265002E9A6C /* NSMutableArrayStack.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2C3111F9FFD800D6C250 /* NSMutableArrayStack.m */; };
-		E45ABBF312393265002E9A6C /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D10E7B1200A85200989268 /* GTMObjC2Runtime.m */; };
-		E45ABBF412393265002E9A6C /* GTMStackTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D10E7D1200A85200989268 /* GTMStackTrace.m */; };
-		E45ABBF512393265002E9A6C /* GTMUIViewTree.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D10E7F1200A85200989268 /* GTMUIViewTree.m */; };
+		E45ABBF312393265002E9A6C /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D10E7B1200A85200989268 /* GTMObjC2Runtime.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E45ABBF412393265002E9A6C /* GTMStackTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D10E7D1200A85200989268 /* GTMStackTrace.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E45ABBF512393265002E9A6C /* GTMUIViewTree.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D10E7F1200A85200989268 /* GTMUIViewTree.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E45ABBF612393265002E9A6C /* uncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D10E891200A88800989268 /* uncaughtExceptionHandler.m */; };
 		E45ABBF812393265002E9A6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4251A0511F9ED6800A98111 /* Foundation.framework */; };
 		E45ABBFA12393265002E9A6C /* Alert.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A85711FA0219008FAF55 /* Alert.h */; };
@@ -80,7 +84,7 @@
 		E4CD2C0711F9FDB200D6C250 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BE411F9FDB200D6C250 /* Alert.m */; };
 		E4CD2C0A11F9FDB200D6C250 /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BE711F9FDB200D6C250 /* NSDateAdditions.m */; };
 		E4CD2C0C11F9FDB200D6C250 /* NSDictionaryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BE911F9FDB200D6C250 /* NSDictionaryAdditions.m */; };
-		E4CD2C0E11F9FDB200D6C250 /* NSInvocationForwardedConstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BEB11F9FDB200D6C250 /* NSInvocationForwardedConstruction.m */; };
+		E4CD2C0E11F9FDB200D6C250 /* NSInvocationForwardedConstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BEB11F9FDB200D6C250 /* NSInvocationForwardedConstruction.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E4CD2C1411F9FDB200D6C250 /* NSNotificationCenterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BF111F9FDB200D6C250 /* NSNotificationCenterAdditions.m */; };
 		E4CD2C1611F9FDB200D6C250 /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BF311F9FDB200D6C250 /* NSStringAdditions.m */; };
 		E4CD2C1811F9FDB200D6C250 /* Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BF511F9FDB200D6C250 /* Swizzle.m */; };
@@ -88,22 +92,24 @@
 		E4CD2C1C11F9FDB200D6C250 /* UIDevice-hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BF911F9FDB200D6C250 /* UIDevice-hardware.m */; };
 		E4CD2C1E11F9FDB200D6C250 /* UIImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BFB11F9FDB200D6C250 /* UIImageAdditions.m */; };
 		E4CD2C2011F9FDB200D6C250 /* UIImageViewAddtions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BFD11F9FDB200D6C250 /* UIImageViewAddtions.m */; };
-		E4CD2C2211F9FDB200D6C250 /* UIPopoverControllerSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BFF11F9FDB200D6C250 /* UIPopoverControllerSingle.m */; };
+		E4CD2C2211F9FDB200D6C250 /* UIPopoverControllerSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BFF11F9FDB200D6C250 /* UIPopoverControllerSingle.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E4CD2C2411F9FDB200D6C250 /* UIScrollViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2C0111F9FDB200D6C250 /* UIScrollViewAdditions.m */; };
 		E4CD2C2611F9FDB200D6C250 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2C0311F9FDB200D6C250 /* UIViewAdditions.m */; };
 		E4CD2C3311F9FFD800D6C250 /* NSMutableArrayStack.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2C3111F9FFD800D6C250 /* NSMutableArrayStack.m */; };
 		E4D10E801200A85200989268 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = E4D10E791200A85200989268 /* GTMDefines.h */; };
 		E4D10E811200A85200989268 /* GTMObjC2Runtime.h in Headers */ = {isa = PBXBuildFile; fileRef = E4D10E7A1200A85200989268 /* GTMObjC2Runtime.h */; };
-		E4D10E821200A85200989268 /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D10E7B1200A85200989268 /* GTMObjC2Runtime.m */; };
+		E4D10E821200A85200989268 /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D10E7B1200A85200989268 /* GTMObjC2Runtime.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E4D10E831200A85200989268 /* GTMStackTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = E4D10E7C1200A85200989268 /* GTMStackTrace.h */; };
-		E4D10E841200A85200989268 /* GTMStackTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D10E7D1200A85200989268 /* GTMStackTrace.m */; };
+		E4D10E841200A85200989268 /* GTMStackTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D10E7D1200A85200989268 /* GTMStackTrace.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E4D10E851200A85200989268 /* GTMUIViewTree.h in Headers */ = {isa = PBXBuildFile; fileRef = E4D10E7E1200A85200989268 /* GTMUIViewTree.h */; };
-		E4D10E861200A85200989268 /* GTMUIViewTree.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D10E7F1200A85200989268 /* GTMUIViewTree.m */; };
+		E4D10E861200A85200989268 /* GTMUIViewTree.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D10E7F1200A85200989268 /* GTMUIViewTree.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E4D10E8A1200A88800989268 /* uncaughtExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = E4D10E881200A88800989268 /* uncaughtExceptionHandler.h */; };
 		E4D10E8B1200A88800989268 /* uncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D10E891200A88800989268 /* uncaughtExceptionHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E41E710714359A7F00585262 /* ObjectToDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectToDictionary.h; path = Headers/ObjectToDictionary.h; sourceTree = "<group>"; };
+		E41E710814359A7F00585262 /* ObjectToDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectToDictionary.m; sourceTree = "<group>"; };
 		E4251A0311F9ED6800A98111 /* libAdditions-iPad.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libAdditions-iPad.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4251A0511F9ED6800A98111 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E4251A0711F9ED6800A98111 /* AdditionsLib_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdditionsLib_Prefix.pch; sourceTree = "<group>"; };
@@ -210,6 +216,8 @@
 				E4D10E891200A88800989268 /* uncaughtExceptionHandler.m */,
 				E491C4B01269A126001FF7F1 /* UIColorLibraryAdditions.m */,
 				E4AA8F1112F861C700D08289 /* NSCoderGSA.m */,
+				E41E710714359A7F00585262 /* ObjectToDictionary.h */,
+				E41E710814359A7F00585262 /* ObjectToDictionary.m */,
 			);
 			name = Additions;
 			sourceTree = "<group>";
@@ -315,6 +323,7 @@
 				E491C4B11269A126001FF7F1 /* UIColorLibraryAdditions.h in Headers */,
 				E4583AF412917024007F0577 /* dispatchShortcuts.h in Headers */,
 				E4AA8F1412F861C700D08289 /* NSCoderGSA.h in Headers */,
+				E41E710914359A7F00585262 /* ObjectToDictionary.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +356,7 @@
 				E45ABC1012393265002E9A6C /* LibAdditions-iPad.h in Headers */,
 				E4583AF512917024007F0577 /* dispatchShortcuts.h in Headers */,
 				E4AA8F1212F861C700D08289 /* NSCoderGSA.h in Headers */,
+				E41E710A14359A7F00585262 /* ObjectToDictionary.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +450,7 @@
 				E4D10E8B1200A88800989268 /* uncaughtExceptionHandler.m in Sources */,
 				E491C4B21269A126001FF7F1 /* UIColorLibraryAdditions.m in Sources */,
 				E4AA8F1512F861C700D08289 /* NSCoderGSA.m in Sources */,
+				E41E710B14359A7F00585262 /* ObjectToDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +478,7 @@
 				E45ABBF612393265002E9A6C /* uncaughtExceptionHandler.m in Sources */,
 				E491C5111269A7A0001FF7F1 /* UIColorLibraryAdditions.m in Sources */,
 				E4AA8F1312F861C700D08289 /* NSCoderGSA.m in Sources */,
+				E41E710C14359A7F00585262 /* ObjectToDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,9 +523,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/AdditionsLib.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AdditionsLib_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/lib;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Additions-iPad";
@@ -525,9 +539,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/AdditionsLib.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AdditionsLib_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/lib;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Additions-iPad";
@@ -539,9 +555,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/AdditionsLib.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AdditionsLib_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/lib;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Additions-iPhone";
@@ -552,9 +570,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/AdditionsLib.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AdditionsLib_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/lib;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Additions-iPhone";

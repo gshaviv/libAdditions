@@ -42,7 +42,7 @@ Version: 1.0
 										  cancelButtonTitle:NSLocalizedString(@"OK","Alert Button") 
 										  otherButtonTitles: nil];
 	[alert show];
-	[alert release];	
+//	[alert release];	
 	return alert;
 }
 
@@ -54,7 +54,7 @@ Version: 1.0
 										  cancelButtonTitle:NSLocalizedString(@"OK","Alert Button") 
 										  otherButtonTitles: nil];
 	[alert show];
-	[alert release];
+//	[alert release];
 	return alert;
 }
 
@@ -66,7 +66,7 @@ Version: 1.0
 										  cancelButtonTitle:NSLocalizedString(@"Cancel","Alert button") 
 										  otherButtonTitles: NSLocalizedString(@"OK","Alert button"), nil];
 	[alert show];
-	[alert release];	
+//	[alert release];	
 	return alert;
 }
 
@@ -81,7 +81,7 @@ Version: 1.0
 										  cancelButtonTitle:cancel 
 										  otherButtonTitles: ok, nil];
 	[alert show];
-	[alert release];	
+//	[alert release];	
 	return alert;
 }
 

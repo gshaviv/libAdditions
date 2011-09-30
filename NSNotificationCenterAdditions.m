@@ -35,7 +35,7 @@
 	if( userInfo ) [info setObject:userInfo forKey:@"userInfo"];
 	
 	[[self class] performSelectorOnMainThread:@selector( _postNotificationName: ) withObject:info waitUntilDone:wait];
-	[info release];
+//	[info release];
 }
 
 + (void) _postNotificationName:(NSDictionary *) info {
@@ -63,7 +63,7 @@
 	if( modes ) [info setObject:modes forKey:@"modes"];
 	
 	[[self class] performSelectorOnMainThread:@selector( _enqueueNotification: ) withObject:info waitUntilDone:NO];
-	[info release];
+//	[info release];
 }
 
 + (void) _enqueueNotification:(NSDictionary *) info {

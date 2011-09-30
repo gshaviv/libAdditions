@@ -3,17 +3,20 @@
 set outdir = "libAdditions"
 set outfile1 = libAdditions-iPad.a
 set outfile2 = libAdditions-iPhone.a
+set sdkver = "5.0"
+set iphonesdk = iphoneos$sdkver
+set simsdk = iphonesimulator$sdkver
 
 if ( ! -e "$outdir" ) then
 	mkdir $outdir
 endif
 rm $outdir/*
 
-xcodebuild -sdk iphoneos4.3 -project AdditionsLib.xcodeproj -target AdditionsLib-iPad
-xcodebuild -sdk iphonesimulator4.3 -project AdditionsLib.xcodeproj -target AdditionsLib-iPad
+xcodebuild -sdk $iphonesdk -project AdditionsLib.xcodeproj -target AdditionsLib-iPad
+xcodebuild -sdk $simsdk -project AdditionsLib.xcodeproj -target AdditionsLib-iPad
 
-xcodebuild -sdk iphoneos4.3 -project AdditionsLib.xcodeproj -target AdditionsLib-iPhone
-xcodebuild -sdk iphonesimulator4.3 -project AdditionsLib.xcodeproj -target AdditionsLib-iPhone
+xcodebuild -sdk $iphonesdk -project AdditionsLib.xcodeproj -target AdditionsLib-iPhone
+xcodebuild -sdk $simsdk -project AdditionsLib.xcodeproj -target AdditionsLib-iPhone
 
 lipo -create build/Release-iphoneos/$outfile1 build/Release-iphonesimulator/$outfile1 -output "$outdir/$outfile1"
 lipo -create build/Release-iphoneos/$outfile2 build/Release-iphonesimulator/$outfile2 -output "$outdir/$outfile2"
