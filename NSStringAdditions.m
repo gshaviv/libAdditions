@@ -11,6 +11,12 @@
 
 @implementation NSString (Additions)
 
+- (int) hexValue {
+	int n = 0;
+	sscanf([self UTF8String], "%x", &n);
+	return n;
+}
+
 - (NSString*)stringByAddingQueryDictionary:(NSDictionary*)query {
 	NSMutableArray* pairs = [NSMutableArray array];
 	for (NSString* key in [query keyEnumerator]) {
@@ -43,7 +49,6 @@
             [pairs setObject:value forKey:key] ;
         }
     }
-//	[scanner release];
 
     return [NSDictionary dictionaryWithDictionary:pairs] ;
 }
