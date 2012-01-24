@@ -16,6 +16,7 @@
 }
 
 - (void)setLeft:(CGFloat)x {
+    if (x != x) return;
 	CGRect frame = self.frame;
 	frame.origin.x = x;
 	self.frame = frame;
