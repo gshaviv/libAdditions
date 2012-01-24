@@ -13,5 +13,5 @@
 
 - (NSString*)stringByAddingQueryDictionary:(NSDictionary*)query ;
 - (NSDictionary*)dictionaryFromQueryUsingEncoding: (NSStringEncoding)encoding;
-
+- (int) hexValue;
 @end

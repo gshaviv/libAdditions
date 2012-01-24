@@ -17,9 +17,9 @@
 
 - (id) pop {
 	id object = [self lastObject];
-	[object retain];
+//	[object retain];
 	[self removeLastObject];
-	return [object autorelease];
+	return object;
 }
 
 @end

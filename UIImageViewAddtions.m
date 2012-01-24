@@ -13,11 +13,11 @@
 
 + (UIImageView *) imageViewWithImageNamed:(NSString *)name {
 	UIImage *image = [UIImage imageNamed:name];
-	return [[[UIImageView alloc] initWithImage:image] autorelease];
+	return [[UIImageView alloc] initWithImage:image];
 }
 
 + (UIImageView *) imageViewWithImage:(UIImage*)image {
-	return [[[UIImageView alloc] initWithImage:image] autorelease];
+	return [[UIImageView alloc] initWithImage:image] ;
 }
 
 @end
