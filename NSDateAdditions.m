@@ -15,7 +15,7 @@ static NSDateFormatter *f = nil;
 + (id)dateWithString:(NSString *)aString {
 	if (f == nil) {
 		f = [[NSDateFormatter alloc] init];
-		[f setDateFormat:@"yyyy-MM-dd HH:mm:ss Z"];
+		[f setDateFormat:@"yyyy'-'MM'-'dd' 'HH':'mm':'ss' Z'"];
 	}
 	NSDate *d = [f dateFromString:aString];
 	return d;
