@@ -18,4 +18,10 @@
 	return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
 
+- (float) grayLevel {
+    float white=0,alpha;
+    [self getWhite:&white alpha:&alpha];
+    return white;
+}
+
 @end
