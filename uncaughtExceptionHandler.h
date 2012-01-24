@@ -8,3 +8,4 @@
  */
 
 extern void InstallUncaughtExceptionHandler();
+extern BOOL DidLastSessionCrash();
