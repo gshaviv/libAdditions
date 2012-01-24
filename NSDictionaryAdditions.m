@@ -75,5 +75,8 @@
 - (void) setUnsignedInteger:(NSUInteger)i forKey:(id)key {
 	[self setObject:[NSNumber numberWithUnsignedInt:i] forKey:key];
 }
+- (void) setFloat:(Float32)f forKey:(id)key {
+    [self setObject:[NSNumber numberWithFloat:f] forKey:key];
+}
 
 @end
