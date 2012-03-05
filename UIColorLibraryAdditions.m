@@ -19,9 +19,13 @@
 }
 
 - (float) grayLevel {
-    float white=0,alpha;
-    [self getWhite:&white alpha:&alpha];
-    return white;
+    CGFloat red,green,blue,alpha;
+    if ([self getRed:&red green:&green blue:&blue alpha:&alpha]) {
+        return red*.3+green*.59+blue*.11;
+    } else {
+        [self getWhite:&red alpha:&alpha];
+        return red;
+    }
 }
 
 @end
