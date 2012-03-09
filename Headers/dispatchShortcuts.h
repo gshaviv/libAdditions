@@ -29,5 +29,21 @@ static inline void dispatch_async_priority(queue_priority_t priority, dispatch_b
 static inline void dispatch_sync_priority(queue_priority_t priority, dispatch_block_t block) {
 	dispatch_sync(dispatch_get_global_queue(priority,0),block);
 }
+static inline void if_needed_dispatch_sync_main(dispatch_block_t block) {
+    if (dispatch_get_current_queue() == dispatch_get_main_queue()) {
+        block();
+    } else {
+        dispatch_sync(dispatch_get_main_queue(),block);
+    }
+}
+
+static inline void if_needed_dispatch_async_main(dispatch_block_t block) {
+    if (dispatch_get_current_queue() == dispatch_get_main_queue()) {
+        block();
+    } else {
+        dispatch_async(dispatch_get_main_queue(),block);
+    }
+}
+
 
 #endif
