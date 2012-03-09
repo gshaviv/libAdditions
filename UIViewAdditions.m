@@ -214,7 +214,8 @@
 @implementation UIView (QuartzAdditions)
 
 - (UIImage*) renderToImage {
-	UIGraphicsBeginImageContext(self.bounds.size);
+    float scale = self.layer.contentsScale;
+	UIGraphicsBeginImageContextWithOptions(self.bounds.size,YES,scale);
 	[self.layer renderInContext:UIGraphicsGetCurrentContext()];
 	UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
 	UIGraphicsEndImageContext();
