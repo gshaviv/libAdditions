@@ -8,15 +8,37 @@
  */
 
 #include "uncaughtExceptionHandler.h"
-
+#import <Foundation/Foundation.h>
+#include <libkern/OSAtomic.h>
+#include <execinfo.h>
 #import "GTMStackTrace.h"
+
+const NSInteger UncaughtExceptionHandlerSkipAddressCount = 4;
+const NSInteger UncaughtExceptionHandlerReportAddressCount = 5;
+
 
 @interface placeholder 
 + (void)logError:(NSString *)errorID message:(NSString *)message exception:(NSException *)exception;
 @end
 
+static NSArray *stackTrace()
+{
+    void* callstack[128];
+    int frames = backtrace(callstack, 128);
+    char **strs = backtrace_symbols(callstack, frames);
+    
+    int i;
+    NSMutableArray *backtrace = [NSMutableArray arrayWithCapacity:frames];
+    for (i = 0;i < frames;i++) {
+	 	[backtrace addObject:[NSString stringWithUTF8String:strs[i]]];
+    }
+    free(strs);
+    
+    return backtrace;
+}
 
-void uncaughtExceptionHandler(NSException *exception) {
+
+static void uncaughtExceptionHandler(NSException *exception) {
     @autoreleasepool {
 	NSString *fullBacktrace = GTMStackTraceFromException(exception);
 	NSSetUncaughtExceptionHandler(NULL);
@@ -29,7 +51,10 @@ void uncaughtExceptionHandler(NSException *exception) {
     @try {
         NSMutableString *backtrace = [NSMutableString stringWithUTF8String:""];
         NSArray *backtraceArray = [fullBacktrace componentsSeparatedByString:@"\n"];
-        NSLog(@"Exception:\n%@",fullBacktrace);
+        NSLog(@"!*!* Exception %@:\n%@",exception,fullBacktrace);
+        fflush(stderr);
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"_crash"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
         
         for (id entry in backtraceArray) {
 			NSRange testRange = [entry rangeOfString:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"]];
@@ -119,4 +144,10 @@ void InstallUncaughtExceptionHandler(void)
 	signal(SIGFPE, SignalHandler);
 	signal(SIGBUS, SignalHandler);
 	signal(SIGPIPE, SignalHandler);
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"_crash"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+BOOL DidLastSessionCrash(void) {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"_crash"];
 }

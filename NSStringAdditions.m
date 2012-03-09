@@ -22,6 +22,7 @@
 	for (NSString* key in [query keyEnumerator]) {
 		NSString* value = [query objectForKey:key];
 		value = [value stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+        value = [value stringByReplacingOccurrencesOfString:@"&" withString:@"%26"];
 		NSString* pair = [NSString stringWithFormat:@"%@=%@", key, value];
 		[pairs addObject:pair];
 	}

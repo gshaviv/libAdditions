@@ -26,6 +26,6 @@
 
 - (void) setInteger:(NSInteger)i forKey:(id)key;
 - (void) setUnsignedInteger:(NSUInteger)i forKey:(id)key;
-
+- (void) setFloat:(Float32)f forKey:(id)key;
 
 @end

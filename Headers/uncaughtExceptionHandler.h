@@ -7,5 +7,5 @@
  *
  */
 
-void InstallUncaughtExceptionHandler(void);
-void uncaughtExceptionHandler(NSException *exception);
+extern void InstallUncaughtExceptionHandler(void);
+extern BOOL DidLastSessionCrash(void);

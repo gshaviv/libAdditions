@@ -24,5 +24,6 @@
 
 + (UIImage*) imageWithFileInBundle:(NSString*)file;
 + (UIImage*) imageWithContentsOfUrl:(NSString*)path;
++ (UIImage*) imageWithFileInBundle:(NSString*)file ofType:(NSString*)ext;
 
 @end
