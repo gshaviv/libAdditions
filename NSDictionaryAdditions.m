@@ -49,22 +49,6 @@
 	return 0;
 }
 
-- (NSNumber*) integerNumberForKey:(id)key {
-	id num = [self objectForKey:key];
-	if (num) {
-		return [NSNumber numberWithInt:[num intValue]];
-	}
-	return nil;
-}
-
-- (NSNumber*) floatNumberForKey:(id)key {
-	id num = [self objectForKey:key];
-	if (num) {
-		return [NSNumber numberWithFloat:[num floatValue]];
-	}
-	return nil;
-}
-
 @end
 
 @implementation NSMutableDictionary (Additions)
