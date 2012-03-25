@@ -46,5 +46,9 @@ static inline CGPoint CGRectCenter(CGRect rect) {
 	return CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect));
 }
 
+static inline CGRect CGRectRound(CGRect rect) {
+    return CGRectMake(rintf(rect.origin.x),rintf(rect.origin.y),rintf(rect.size.width),rintf(rect.size.height));
+}
+
 
 #define NSRangeEnd(r) (r.location + r.length)
