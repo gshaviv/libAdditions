@@ -29,10 +29,6 @@
 		E45ABBF012393265002E9A6C /* UIScrollViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2C0111F9FDB200D6C250 /* UIScrollViewAdditions.m */; };
 		E45ABBF112393265002E9A6C /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2C0311F9FDB200D6C250 /* UIViewAdditions.m */; };
 		E45ABBF212393265002E9A6C /* NSMutableArrayStack.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2C3111F9FFD800D6C250 /* NSMutableArrayStack.m */; };
-		E45ABBF312393265002E9A6C /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D10E7B1200A85200989268 /* GTMObjC2Runtime.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E45ABBF412393265002E9A6C /* GTMStackTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D10E7D1200A85200989268 /* GTMStackTrace.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E45ABBF512393265002E9A6C /* GTMUIViewTree.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D10E7F1200A85200989268 /* GTMUIViewTree.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E45ABBF612393265002E9A6C /* uncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D10E891200A88800989268 /* uncaughtExceptionHandler.m */; };
 		E45ABBF812393265002E9A6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4251A0511F9ED6800A98111 /* Foundation.framework */; };
 		E45ABBFA12393265002E9A6C /* Alert.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A85711FA0219008FAF55 /* Alert.h */; };
 		E45ABBFB12393265002E9A6C /* CGGeometryAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A85811FA0219008FAF55 /* CGGeometryAdditions.h */; };
@@ -51,11 +47,6 @@
 		E45ABC0812393265002E9A6C /* UIScrollViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A86711FA0219008FAF55 /* UIScrollViewAdditions.h */; };
 		E45ABC0912393265002E9A6C /* UIViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A86811FA0219008FAF55 /* UIViewAdditions.h */; };
 		E45ABC0A12393265002E9A6C /* LibAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A87D11FA028A008FAF55 /* LibAdditions.h */; };
-		E45ABC0B12393265002E9A6C /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = E4D10E791200A85200989268 /* GTMDefines.h */; };
-		E45ABC0C12393265002E9A6C /* GTMObjC2Runtime.h in Headers */ = {isa = PBXBuildFile; fileRef = E4D10E7A1200A85200989268 /* GTMObjC2Runtime.h */; };
-		E45ABC0D12393265002E9A6C /* GTMStackTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = E4D10E7C1200A85200989268 /* GTMStackTrace.h */; };
-		E45ABC0E12393265002E9A6C /* GTMUIViewTree.h in Headers */ = {isa = PBXBuildFile; fileRef = E4D10E7E1200A85200989268 /* GTMUIViewTree.h */; };
-		E45ABC0F12393265002E9A6C /* uncaughtExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = E4D10E881200A88800989268 /* uncaughtExceptionHandler.h */; };
 		E45ABC1012393265002E9A6C /* LibAdditions-iPad.h in Headers */ = {isa = PBXBuildFile; fileRef = E45ABBDE12393221002E9A6C /* LibAdditions-iPad.h */; };
 		E491C4B11269A126001FF7F1 /* UIColorLibraryAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E491C4AF1269A126001FF7F1 /* UIColorLibraryAdditions.h */; };
 		E491C4B21269A126001FF7F1 /* UIColorLibraryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E491C4B01269A126001FF7F1 /* UIColorLibraryAdditions.m */; };
@@ -96,15 +87,6 @@
 		E4CD2C2411F9FDB200D6C250 /* UIScrollViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2C0111F9FDB200D6C250 /* UIScrollViewAdditions.m */; };
 		E4CD2C2611F9FDB200D6C250 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2C0311F9FDB200D6C250 /* UIViewAdditions.m */; };
 		E4CD2C3311F9FFD800D6C250 /* NSMutableArrayStack.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2C3111F9FFD800D6C250 /* NSMutableArrayStack.m */; };
-		E4D10E801200A85200989268 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = E4D10E791200A85200989268 /* GTMDefines.h */; };
-		E4D10E811200A85200989268 /* GTMObjC2Runtime.h in Headers */ = {isa = PBXBuildFile; fileRef = E4D10E7A1200A85200989268 /* GTMObjC2Runtime.h */; };
-		E4D10E821200A85200989268 /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D10E7B1200A85200989268 /* GTMObjC2Runtime.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E4D10E831200A85200989268 /* GTMStackTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = E4D10E7C1200A85200989268 /* GTMStackTrace.h */; };
-		E4D10E841200A85200989268 /* GTMStackTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D10E7D1200A85200989268 /* GTMStackTrace.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E4D10E851200A85200989268 /* GTMUIViewTree.h in Headers */ = {isa = PBXBuildFile; fileRef = E4D10E7E1200A85200989268 /* GTMUIViewTree.h */; };
-		E4D10E861200A85200989268 /* GTMUIViewTree.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D10E7F1200A85200989268 /* GTMUIViewTree.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E4D10E8A1200A88800989268 /* uncaughtExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = E4D10E881200A88800989268 /* uncaughtExceptionHandler.h */; };
-		E4D10E8B1200A88800989268 /* uncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D10E891200A88800989268 /* uncaughtExceptionHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -152,15 +134,6 @@
 		E4CD2C0111F9FDB200D6C250 /* UIScrollViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIScrollViewAdditions.m; sourceTree = SOURCE_ROOT; };
 		E4CD2C0311F9FDB200D6C250 /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = SOURCE_ROOT; };
 		E4CD2C3111F9FFD800D6C250 /* NSMutableArrayStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableArrayStack.m; sourceTree = SOURCE_ROOT; };
-		E4D10E791200A85200989268 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
-		E4D10E7A1200A85200989268 /* GTMObjC2Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMObjC2Runtime.h; sourceTree = "<group>"; };
-		E4D10E7B1200A85200989268 /* GTMObjC2Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMObjC2Runtime.m; sourceTree = "<group>"; };
-		E4D10E7C1200A85200989268 /* GTMStackTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMStackTrace.h; sourceTree = "<group>"; };
-		E4D10E7D1200A85200989268 /* GTMStackTrace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMStackTrace.m; sourceTree = "<group>"; };
-		E4D10E7E1200A85200989268 /* GTMUIViewTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMUIViewTree.h; sourceTree = "<group>"; };
-		E4D10E7F1200A85200989268 /* GTMUIViewTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMUIViewTree.m; sourceTree = "<group>"; };
-		E4D10E881200A88800989268 /* uncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uncaughtExceptionHandler.h; sourceTree = "<group>"; };
-		E4D10E891200A88800989268 /* uncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = uncaughtExceptionHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,7 +186,6 @@
 				E4CD2BFF11F9FDB200D6C250 /* UIPopoverControllerSingle.m */,
 				E4CD2C0111F9FDB200D6C250 /* UIScrollViewAdditions.m */,
 				E4CD2C0311F9FDB200D6C250 /* UIViewAdditions.m */,
-				E4D10E891200A88800989268 /* uncaughtExceptionHandler.m */,
 				E491C4B01269A126001FF7F1 /* UIColorLibraryAdditions.m */,
 				E4AA8F1112F861C700D08289 /* NSCoderGSA.m */,
 				E41E710714359A7F00585262 /* ObjectToDictionary.h */,
@@ -250,7 +222,6 @@
 		E4A7A85611FA0219008FAF55 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				E4D10E881200A88800989268 /* uncaughtExceptionHandler.h */,
 				E4A7A87D11FA028A008FAF55 /* LibAdditions.h */,
 				E491C4AF1269A126001FF7F1 /* UIColorLibraryAdditions.h */,
 				E4AA8F1012F861C700D08289 /* NSCoderGSA.h */,
@@ -279,13 +250,6 @@
 		E4D10E781200A85200989268 /* GTM */ = {
 			isa = PBXGroup;
 			children = (
-				E4D10E791200A85200989268 /* GTMDefines.h */,
-				E4D10E7A1200A85200989268 /* GTMObjC2Runtime.h */,
-				E4D10E7B1200A85200989268 /* GTMObjC2Runtime.m */,
-				E4D10E7C1200A85200989268 /* GTMStackTrace.h */,
-				E4D10E7D1200A85200989268 /* GTMStackTrace.m */,
-				E4D10E7E1200A85200989268 /* GTMUIViewTree.h */,
-				E4D10E7F1200A85200989268 /* GTMUIViewTree.m */,
 			);
 			path = GTM;
 			sourceTree = "<group>";
@@ -314,11 +278,6 @@
 				E4A7A87A11FA0219008FAF55 /* UIScrollViewAdditions.h in Headers */,
 				E4A7A87B11FA0219008FAF55 /* UIViewAdditions.h in Headers */,
 				E4A7A87E11FA028A008FAF55 /* LibAdditions.h in Headers */,
-				E4D10E801200A85200989268 /* GTMDefines.h in Headers */,
-				E4D10E811200A85200989268 /* GTMObjC2Runtime.h in Headers */,
-				E4D10E831200A85200989268 /* GTMStackTrace.h in Headers */,
-				E4D10E851200A85200989268 /* GTMUIViewTree.h in Headers */,
-				E4D10E8A1200A88800989268 /* uncaughtExceptionHandler.h in Headers */,
 				E45ABBDF12393221002E9A6C /* LibAdditions-iPad.h in Headers */,
 				E491C4B11269A126001FF7F1 /* UIColorLibraryAdditions.h in Headers */,
 				E4583AF412917024007F0577 /* dispatchShortcuts.h in Headers */,
@@ -348,11 +307,6 @@
 				E45ABC0812393265002E9A6C /* UIScrollViewAdditions.h in Headers */,
 				E45ABC0912393265002E9A6C /* UIViewAdditions.h in Headers */,
 				E45ABC0A12393265002E9A6C /* LibAdditions.h in Headers */,
-				E45ABC0B12393265002E9A6C /* GTMDefines.h in Headers */,
-				E45ABC0C12393265002E9A6C /* GTMObjC2Runtime.h in Headers */,
-				E45ABC0D12393265002E9A6C /* GTMStackTrace.h in Headers */,
-				E45ABC0E12393265002E9A6C /* GTMUIViewTree.h in Headers */,
-				E45ABC0F12393265002E9A6C /* uncaughtExceptionHandler.h in Headers */,
 				E45ABC1012393265002E9A6C /* LibAdditions-iPad.h in Headers */,
 				E4583AF512917024007F0577 /* dispatchShortcuts.h in Headers */,
 				E4AA8F1212F861C700D08289 /* NSCoderGSA.h in Headers */,
@@ -403,7 +357,7 @@
 		E42519F711F9ED6800A98111 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "LitePoint Corp.";
 			};
 			buildConfigurationList = E42519FA11F9ED6800A98111 /* Build configuration list for PBXProject "AdditionsLib" */;
@@ -444,10 +398,6 @@
 				E4CD2C2411F9FDB200D6C250 /* UIScrollViewAdditions.m in Sources */,
 				E4CD2C2611F9FDB200D6C250 /* UIViewAdditions.m in Sources */,
 				E4CD2C3311F9FFD800D6C250 /* NSMutableArrayStack.m in Sources */,
-				E4D10E821200A85200989268 /* GTMObjC2Runtime.m in Sources */,
-				E4D10E841200A85200989268 /* GTMStackTrace.m in Sources */,
-				E4D10E861200A85200989268 /* GTMUIViewTree.m in Sources */,
-				E4D10E8B1200A88800989268 /* uncaughtExceptionHandler.m in Sources */,
 				E491C4B21269A126001FF7F1 /* UIColorLibraryAdditions.m in Sources */,
 				E4AA8F1512F861C700D08289 /* NSCoderGSA.m in Sources */,
 				E41E710B14359A7F00585262 /* ObjectToDictionary.m in Sources */,
@@ -472,10 +422,6 @@
 				E45ABBF012393265002E9A6C /* UIScrollViewAdditions.m in Sources */,
 				E45ABBF112393265002E9A6C /* UIViewAdditions.m in Sources */,
 				E45ABBF212393265002E9A6C /* NSMutableArrayStack.m in Sources */,
-				E45ABBF312393265002E9A6C /* GTMObjC2Runtime.m in Sources */,
-				E45ABBF412393265002E9A6C /* GTMStackTrace.m in Sources */,
-				E45ABBF512393265002E9A6C /* GTMUIViewTree.m in Sources */,
-				E45ABBF612393265002E9A6C /* uncaughtExceptionHandler.m in Sources */,
 				E491C5111269A7A0001FF7F1 /* UIColorLibraryAdditions.m in Sources */,
 				E4AA8F1312F861C700D08289 /* NSCoderGSA.m in Sources */,
 				E41E710C14359A7F00585262 /* ObjectToDictionary.m in Sources */,

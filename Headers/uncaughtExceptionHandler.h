@@ -7,5 +7,3 @@
  *
  */
 
-void InstallUncaughtExceptionHandler(void);
-void uncaughtExceptionHandler(NSException *exception);
