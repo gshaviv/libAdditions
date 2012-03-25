@@ -18,4 +18,14 @@
 	return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
 
+- (float) grayLevel {
+    CGFloat red,green,blue,alpha;
+    if ([self getRed:&red green:&green blue:&blue alpha:&alpha]) {
+        return red*.3+green*.59+blue*.11;
+    } else {
+        [self getWhite:&red alpha:&alpha];
+        return red;
+    }
+}
+
 @end

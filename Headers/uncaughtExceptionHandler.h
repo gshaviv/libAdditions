@@ -7,3 +7,6 @@
  *
  */
 
+
+extern void InstallUncaughtExceptionHandler(void);
+extern BOOL DidLastSessionCrash(void);

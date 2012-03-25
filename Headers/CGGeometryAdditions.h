@@ -40,4 +40,11 @@ static inline CGPoint CGRectGetCenter(CGRect rect) {
     return CGPointMake(CGRectGetMidX(rect),CGRectGetMidY(rect));
 }
 
+CGSize sizeThatFitsKeepingAspectRatio(CGSize originalSize, CGSize sizeToFit);
+
+static inline CGPoint CGRectCenter(CGRect rect) {
+	return CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect));
+}
+
+
 #define NSRangeEnd(r) (r.location + r.length)

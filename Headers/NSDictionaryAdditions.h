@@ -17,8 +17,6 @@
 - (NSUInteger) unsignedIntegerForKey:(id)key default:(NSUInteger)defaultValue;
 - (float) floatForKey:(id)key;
 - (BOOL) boolForKey:(id)key;
-- (NSNumber*) integerNumberForKey:(id)key;
-- (NSNumber*) floatNumberForKey:(id)key;
 @end
 
 
@@ -26,6 +24,6 @@
 
 - (void) setInteger:(NSInteger)i forKey:(id)key;
 - (void) setUnsignedInteger:(NSUInteger)i forKey:(id)key;
-
+- (void) setFloat:(Float32)f forKey:(id)key;
 
 @end

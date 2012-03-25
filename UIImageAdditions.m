@@ -6,6 +6,10 @@
 	return [UIImage imageWithContentsOfFile:[[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:file]];
 }
 
++ (UIImage*) imageWithFileInBundle:(NSString*)file ofType:(NSString*)ext {
+	return [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:file ofType:ext]];
+}
+
 + (UIImage*) imageWithContentsOfUrl:(NSString*)path {
 	NSURL *url = [NSURL URLWithString:path];
 	NSData *data = [NSData dataWithContentsOfURL:url];

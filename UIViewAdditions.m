@@ -8,6 +8,25 @@
 
 #import "UIViewAdditions.h"
 #import "UIScrollViewAdditions.h"
+#import "CGGeometryAdditions.h"
+
+CGSize sizeThatFitsKeepingAspectRatio(CGSize originalSize, CGSize sizeToFit)
+{
+	if (originalSize.width <= sizeToFit.width && originalSize.height <= sizeToFit.height)
+	{
+		return originalSize;
+	}
+	
+	CGFloat necessaryZoomWidth = sizeToFit.width / originalSize.width;
+	CGFloat necessaryZoomHeight = sizeToFit.height / originalSize.height;
+	
+	CGFloat smallerZoom = MIN(necessaryZoomWidth, necessaryZoomHeight);
+	
+	CGSize scaledSize = CGSizeMake(roundf(originalSize.width*smallerZoom), roundf(originalSize.height*smallerZoom));
+	
+	return scaledSize;
+}
+
 
 @implementation UIView (Additions)
 
@@ -16,6 +35,7 @@
 }
 
 - (void)setLeft:(CGFloat)x {
+    if (x != x) return;
 	CGRect frame = self.frame;
 	frame.origin.x = x;
 	self.frame = frame;
@@ -214,7 +234,8 @@
 @implementation UIView (QuartzAdditions)
 
 - (UIImage*) renderToImage {
-	UIGraphicsBeginImageContext(self.bounds.size);
+    float scale = self.layer.contentsScale;
+	UIGraphicsBeginImageContextWithOptions(self.bounds.size,YES,scale);
 	[self.layer renderInContext:UIGraphicsGetCurrentContext()];
 	UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
 	UIGraphicsEndImageContext();

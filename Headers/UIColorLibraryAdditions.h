@@ -11,4 +11,5 @@
 
 @interface UIColor (LibraryAdditions)
 + (UIColor*) colorWithWebColor:(unsigned long)color andAlpha:(float)alpha;
+- (float) grayLevel;
 @end
