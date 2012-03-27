@@ -41,6 +41,8 @@
 #ifdef QUARTZADDITIONS
 @interface UIView (QuartzAdditions)
 - (UIImage*) renderToImage;
+- (void)shakeWithOffset:(CGFloat)aOffset damping:(CGFloat)damping duration:(CGFloat)aDuration maxShakes:(NSInteger)maxShakes;
+- (void)shake;
 @end
 #endif
 

@@ -232,7 +232,6 @@ CGSize sizeThatFitsKeepingAspectRatio(CGSize originalSize, CGSize sizeToFit)
 #ifdef QUARTZADDITIONS
 #import <QuartzCore/QuartzCore.h>
 @implementation UIView (QuartzAdditions)
-
 - (UIImage*) renderToImage {
     float scale = self.layer.contentsScale;
 	UIGraphicsBeginImageContextWithOptions(self.bounds.size,YES,scale);
@@ -241,6 +240,31 @@ CGSize sizeThatFitsKeepingAspectRatio(CGSize originalSize, CGSize sizeToFit)
 	UIGraphicsEndImageContext();
 	return viewImage;
 }
+- (void)shakeWithOffset:(CGFloat)aOffset damping:(CGFloat)damping duration:(CGFloat)aDuration maxShakes:(NSInteger)maxShakes {
+	CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+	[animation setDuration:aDuration];
+	
+	NSMutableArray *keys = [NSMutableArray arrayWithCapacity:20];
+	while(aOffset > 0.01) {
+		[keys addObject:[NSValue valueWithCGPoint:CGPointMake(self.center.x - aOffset, self.center.y)]];
+		aOffset *= damping;
+		[keys addObject:[NSValue valueWithCGPoint:CGPointMake(self.center.x + aOffset, self.center.y)]];
+		aOffset *= damping;
+		maxShakes--;
+		if(maxShakes <= 0) {
+			break;
+		}
+	}
+	
+	animation.values = keys;
+	
+	[self.layer addAnimation:animation forKey:@"position"];
+}
+
+- (void)shake {
+	[self shakeWithOffset:40.0 damping:0.85 duration:1.5 maxShakes:30];
+}
+
 @end
 #endif
 
