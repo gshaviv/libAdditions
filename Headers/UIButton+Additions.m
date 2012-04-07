@@ -13,6 +13,7 @@
 - (UIBarButtonItem*) barItem {
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:self];
     [self sizeToFit];
+    self.width += self.imageEdgeInsets.left + self.imageEdgeInsets.right + self.titleEdgeInsets.left + self.titleEdgeInsets.right;// bug, size to fit doesn't consider insets for some reason
     self.height = 38;
     return item;
 }

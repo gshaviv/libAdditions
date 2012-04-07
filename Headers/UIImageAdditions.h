@@ -10,6 +10,7 @@
 
 // an autorealeased scaled image
 - (UIImage*)imageWithWidth:(CGFloat)width height:(CGFloat)height; 
+- (UIImage*) imageThatFitsDimension:(CGFloat)maxDim;
 
 /**
  * Draws the image using content mode rules.

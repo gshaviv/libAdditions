@@ -97,6 +97,15 @@
 	return viewImage;
 }
 
+- (UIImage*) imageThatFitsDimension:(CGFloat)maxDim {
+    CGSize size = self.size;
+    if (size.width > size.height) {
+        return [self imageWithWidth:maxDim height:rintf(maxDim/size.width * size.height)];
+    } else {
+        return [self imageWithWidth:rintf(maxDim/size.height*size.width) height:maxDim];
+    }
+}
+
 - (void)drawInRect:(CGRect)rect contentMode:(UIViewContentMode)contentMode {
   BOOL clip = NO;
   CGRect originalRect = rect;
