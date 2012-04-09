@@ -88,13 +88,14 @@
 }
 
 - (UIImage*)imageWithWidth:(CGFloat)width height:(CGFloat)height {
-	UIGraphicsBeginImageContext(CGSizeMake(width, height));
-	//[self drawInRect:CGRectMake(0, 0, width, height)];
-	CGContextScaleCTM(UIGraphicsGetCurrentContext(), 1., -1);
-	CGContextDrawImage(UIGraphicsGetCurrentContext(), CGRectMake(0, -height, width, height), self.CGImage);
-	UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
-	UIGraphicsEndImageContext();
-	return viewImage;
+    return [self transformWidth:width height:height rotate:YES];
+//	UIGraphicsBeginImageContext(CGSizeMake(width, height));
+//	//[self drawInRect:CGRectMake(0, 0, width, height)];
+//	CGContextScaleCTM(UIGraphicsGetCurrentContext(), 1., -1);
+//	CGContextDrawImage(UIGraphicsGetCurrentContext(), CGRectMake(0, -height, width, height), self.CGImage);
+//	UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+//	UIGraphicsEndImageContext();
+//	return viewImage;
 }
 
 - (UIImage*) imageThatFitsDimension:(CGFloat)maxDim {
