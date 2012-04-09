@@ -36,9 +36,16 @@
 }
 
 - (NSDictionary*)dictionaryFromQueryUsingEncoding: (NSStringEncoding)encoding { 
+    NSUInteger queryStart;
+    if ((queryStart = [self rangeOfString:@"?"].location) == NSNotFound) {
+        queryStart = 0;
+    } else {
+        queryStart += 1;
+    }
 	NSCharacterSet* delimiterSet = [NSCharacterSet characterSetWithCharactersInString:@"&;"] ;
     NSMutableDictionary* pairs = [NSMutableDictionary dictionary] ;
     NSScanner* scanner = [[NSScanner alloc] initWithString:self] ;
+    scanner.scanLocation = queryStart;
     while (![scanner isAtEnd]) {
         NSString* pairString ;
         [scanner scanUpToCharactersFromSet:delimiterSet
