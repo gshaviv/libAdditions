@@ -47,8 +47,8 @@
 // public
 
 - (UIImage*)transformWidth:(CGFloat)width height:(CGFloat)height rotate:(BOOL)rotate {
-  CGFloat destW = width;
-  CGFloat destH = height;
+//  CGFloat destW = width;
+//  CGFloat destH = height;
   CGFloat sourceW = width;
   CGFloat sourceH = height;
   if (rotate) {
@@ -59,43 +59,47 @@
     }
   }
   
-  CGImageRef imageRef = self.CGImage;
-  CGContextRef bitmap = CGBitmapContextCreate(NULL, destW, destH,
-    CGImageGetBitsPerComponent(imageRef), CGImageGetBytesPerRow(imageRef), CGImageGetColorSpace(imageRef),
-    CGImageGetBitmapInfo(imageRef));
+//  CGImageRef imageRef = self.CGImage;
+//  CGContextRef bitmap = CGBitmapContextCreate(NULL, destW, destH,
+//    CGImageGetBitsPerComponent(imageRef), CGImageGetBytesPerRow(imageRef), CGImageGetColorSpace(imageRef),
+//    CGImageGetBitmapInfo(imageRef));
 
-  if (rotate) {
-    if (self.imageOrientation == UIImageOrientationDown) {
-      CGContextTranslateCTM(bitmap, sourceW, sourceH);
-      CGContextRotateCTM(bitmap, 180 * (M_PI/180));
-    } else if (self.imageOrientation == UIImageOrientationLeft) {
-      CGContextTranslateCTM(bitmap, sourceH, 0);
-      CGContextRotateCTM(bitmap, 90 * (M_PI/180));
-    } else if (self.imageOrientation == UIImageOrientationRight) {
-      CGContextTranslateCTM(bitmap, 0, sourceW);
-      CGContextRotateCTM(bitmap, -90 * (M_PI/180));
+
+//  CGContextDrawImage(bitmap, CGRectMake(0,0,sourceW,sourceH), imageRef);
+//
+//  CGImageRef ref = CGBitmapContextCreateImage(bitmap);
+//  UIImage* result = [UIImage imageWithCGImage:ref];
+//  CGContextRelease(bitmap);
+//  CGImageRelease(ref);
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(width, height), NO, self.scale);
+	CGContextRef ctx = UIGraphicsGetCurrentContext();
+	CGContextScaleCTM(ctx, 1., -1);
+    if (rotate) {
+        if (self.imageOrientation == UIImageOrientationDown) {
+            CGContextTranslateCTM(ctx, sourceW, sourceH);
+            CGContextRotateCTM(ctx, 180 * (M_PI/180));
+        } else if (self.imageOrientation == UIImageOrientationLeft) {
+            CGContextTranslateCTM(ctx, sourceH, 0);
+            CGContextRotateCTM(ctx, 90 * (M_PI/180));
+        } else if (self.imageOrientation == UIImageOrientationRight) {
+            CGContextTranslateCTM(ctx, 0, sourceW);
+            CGContextRotateCTM(ctx, -90 * (M_PI/180));
+        }
     }
-  }
 
-  CGContextDrawImage(bitmap, CGRectMake(0,0,sourceW,sourceH), imageRef);
-
-  CGImageRef ref = CGBitmapContextCreateImage(bitmap);
-  UIImage* result = [UIImage imageWithCGImage:ref];
-  CGContextRelease(bitmap);
-  CGImageRelease(ref);
-
-  return result;
+	CGContextDrawImage(ctx, CGRectMake(0, -height, width, height), self.CGImage);
+	UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	return viewImage;
 }
 
 - (UIImage*)imageWithWidth:(CGFloat)width height:(CGFloat)height {
-    return [self transformWidth:width height:height rotate:YES];
 //	UIGraphicsBeginImageContext(CGSizeMake(width, height));
-//	//[self drawInRect:CGRectMake(0, 0, width, height)];
-//	CGContextScaleCTM(UIGraphicsGetCurrentContext(), 1., -1);
-//	CGContextDrawImage(UIGraphicsGetCurrentContext(), CGRectMake(0, -height, width, height), self.CGImage);
-//	UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
-//	UIGraphicsEndImageContext();
-//	return viewImage;
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(width, height), NO, self.scale);
+    [self drawInRect:CGRectMake(0, 0, width, height)];
+	UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	return viewImage;
 }
 
 - (UIImage*) imageThatFitsDimension:(CGFloat)maxDim {

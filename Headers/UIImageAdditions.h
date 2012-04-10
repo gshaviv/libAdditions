@@ -6,7 +6,7 @@
 /*
  * Resizes and/or rotates an image.
  */
-- (UIImage*)transformWidth:(CGFloat)width height:(CGFloat)height rotate:(BOOL)rotate;
+//- (UIImage*)transformWidth:(CGFloat)width height:(CGFloat)height rotate:(BOOL)rotate;
 
 // an autorealeased scaled image
 - (UIImage*)imageWithWidth:(CGFloat)width height:(CGFloat)height; 
