@@ -23,9 +23,9 @@
 // class (not a subclass of NSObject) and does not implement the NSObject
 // protocol (and so is *not* a first-class object).
 //
-@interface InvocationProxy
+@interface InvocationProxy : NSObject
 {
-    Class isa;
+//    Class isa;
     NSInvocation **invocation;
 	id target;
 	BOOL retainArguments;
@@ -39,7 +39,8 @@
 	retainArguments:(BOOL)retain;
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector;
 - (void)forwardInvocation:(NSInvocation *)forwardedInvocation;
-
+//- (id)init;
+//- (id)autorelease;
 @end
 
 #ifndef __OBJC_GC__
