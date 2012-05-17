@@ -8,49 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		E41E710914359A7F00585262 /* ObjectToDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = E41E710714359A7F00585262 /* ObjectToDictionary.h */; };
-		E41E710A14359A7F00585262 /* ObjectToDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = E41E710714359A7F00585262 /* ObjectToDictionary.h */; };
 		E41E710B14359A7F00585262 /* ObjectToDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = E41E710814359A7F00585262 /* ObjectToDictionary.m */; };
-		E41E710C14359A7F00585262 /* ObjectToDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = E41E710814359A7F00585262 /* ObjectToDictionary.m */; };
 		E4251A0611F9ED6800A98111 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4251A0511F9ED6800A98111 /* Foundation.framework */; };
 		E4583AF412917024007F0577 /* dispatchShortcuts.h in Headers */ = {isa = PBXBuildFile; fileRef = E4583AF312917024007F0577 /* dispatchShortcuts.h */; };
-		E4583AF512917024007F0577 /* dispatchShortcuts.h in Headers */ = {isa = PBXBuildFile; fileRef = E4583AF312917024007F0577 /* dispatchShortcuts.h */; };
 		E45ABBDF12393221002E9A6C /* LibAdditions-iPad.h in Headers */ = {isa = PBXBuildFile; fileRef = E45ABBDE12393221002E9A6C /* LibAdditions-iPad.h */; };
-		E45ABBE412393265002E9A6C /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BE411F9FDB200D6C250 /* Alert.m */; };
-		E45ABBE512393265002E9A6C /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BE711F9FDB200D6C250 /* NSDateAdditions.m */; };
-		E45ABBE612393265002E9A6C /* NSDictionaryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BE911F9FDB200D6C250 /* NSDictionaryAdditions.m */; };
-		E45ABBE712393265002E9A6C /* NSInvocationForwardedConstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BEB11F9FDB200D6C250 /* NSInvocationForwardedConstruction.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E45ABBE812393265002E9A6C /* NSNotificationCenterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BF111F9FDB200D6C250 /* NSNotificationCenterAdditions.m */; };
-		E45ABBE912393265002E9A6C /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BF311F9FDB200D6C250 /* NSStringAdditions.m */; };
-		E45ABBEA12393265002E9A6C /* Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BF511F9FDB200D6C250 /* Swizzle.m */; };
-		E45ABBEB12393265002E9A6C /* UIApplicationNetworkActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BF711F9FDB200D6C250 /* UIApplicationNetworkActivity.m */; };
-		E45ABBEC12393265002E9A6C /* UIDevice-hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BF911F9FDB200D6C250 /* UIDevice-hardware.m */; };
-		E45ABBED12393265002E9A6C /* UIImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BFB11F9FDB200D6C250 /* UIImageAdditions.m */; };
-		E45ABBEE12393265002E9A6C /* UIImageViewAddtions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BFD11F9FDB200D6C250 /* UIImageViewAddtions.m */; };
-		E45ABBF012393265002E9A6C /* UIScrollViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2C0111F9FDB200D6C250 /* UIScrollViewAdditions.m */; };
-		E45ABBF112393265002E9A6C /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2C0311F9FDB200D6C250 /* UIViewAdditions.m */; };
-		E45ABBF212393265002E9A6C /* NSMutableArrayStack.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2C3111F9FFD800D6C250 /* NSMutableArrayStack.m */; };
-		E45ABBF812393265002E9A6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4251A0511F9ED6800A98111 /* Foundation.framework */; };
-		E45ABBFA12393265002E9A6C /* Alert.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A85711FA0219008FAF55 /* Alert.h */; };
-		E45ABBFB12393265002E9A6C /* CGGeometryAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A85811FA0219008FAF55 /* CGGeometryAdditions.h */; };
-		E45ABBFC12393265002E9A6C /* NSDateAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A85911FA0219008FAF55 /* NSDateAdditions.h */; };
-		E45ABBFD12393265002E9A6C /* NSDictionaryAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A85A11FA0219008FAF55 /* NSDictionaryAdditions.h */; };
-		E45ABBFE12393265002E9A6C /* NSInvocation(ForwardedConstruction).h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A85B11FA0219008FAF55 /* NSInvocation(ForwardedConstruction).h */; };
-		E45ABBFF12393265002E9A6C /* NSMutableArrayStack.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A85E11FA0219008FAF55 /* NSMutableArrayStack.h */; };
-		E45ABC0012393265002E9A6C /* NSNotificationCenterAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A85F11FA0219008FAF55 /* NSNotificationCenterAdditions.h */; };
-		E45ABC0112393265002E9A6C /* NSStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A86011FA0219008FAF55 /* NSStringAdditions.h */; };
-		E45ABC0212393265002E9A6C /* Swizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A86111FA0219008FAF55 /* Swizzle.h */; };
-		E45ABC0312393265002E9A6C /* UIApplicationNetworkActivity.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A86211FA0219008FAF55 /* UIApplicationNetworkActivity.h */; };
-		E45ABC0412393265002E9A6C /* UIDevice-hardware.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A86311FA0219008FAF55 /* UIDevice-hardware.h */; };
-		E45ABC0512393265002E9A6C /* UIImageAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A86411FA0219008FAF55 /* UIImageAdditions.h */; };
-		E45ABC0612393265002E9A6C /* UIImageViewAddtions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A86511FA0219008FAF55 /* UIImageViewAddtions.h */; };
-		E45ABC0712393265002E9A6C /* UIPopoverControllerSingle.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A86611FA0219008FAF55 /* UIPopoverControllerSingle.h */; };
-		E45ABC0812393265002E9A6C /* UIScrollViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A86711FA0219008FAF55 /* UIScrollViewAdditions.h */; };
-		E45ABC0912393265002E9A6C /* UIViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A86811FA0219008FAF55 /* UIViewAdditions.h */; };
-		E45ABC0A12393265002E9A6C /* LibAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A87D11FA028A008FAF55 /* LibAdditions.h */; };
-		E45ABC1012393265002E9A6C /* LibAdditions-iPad.h in Headers */ = {isa = PBXBuildFile; fileRef = E45ABBDE12393221002E9A6C /* LibAdditions-iPad.h */; };
 		E491C4B11269A126001FF7F1 /* UIColorLibraryAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E491C4AF1269A126001FF7F1 /* UIColorLibraryAdditions.h */; };
 		E491C4B21269A126001FF7F1 /* UIColorLibraryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E491C4B01269A126001FF7F1 /* UIColorLibraryAdditions.m */; };
-		E491C5111269A7A0001FF7F1 /* UIColorLibraryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E491C4B01269A126001FF7F1 /* UIColorLibraryAdditions.m */; };
 		E4A7A86A11FA0219008FAF55 /* Alert.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A85711FA0219008FAF55 /* Alert.h */; };
 		E4A7A86B11FA0219008FAF55 /* CGGeometryAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A85811FA0219008FAF55 /* CGGeometryAdditions.h */; };
 		E4A7A86C11FA0219008FAF55 /* NSDateAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A85911FA0219008FAF55 /* NSDateAdditions.h */; };
@@ -68,14 +31,10 @@
 		E4A7A87A11FA0219008FAF55 /* UIScrollViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A86711FA0219008FAF55 /* UIScrollViewAdditions.h */; };
 		E4A7A87B11FA0219008FAF55 /* UIViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A86811FA0219008FAF55 /* UIViewAdditions.h */; };
 		E4A7A87E11FA028A008FAF55 /* LibAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A87D11FA028A008FAF55 /* LibAdditions.h */; };
-		E4AA8F1212F861C700D08289 /* NSCoderGSA.h in Headers */ = {isa = PBXBuildFile; fileRef = E4AA8F1012F861C700D08289 /* NSCoderGSA.h */; };
-		E4AA8F1312F861C700D08289 /* NSCoderGSA.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AA8F1112F861C700D08289 /* NSCoderGSA.m */; };
 		E4AA8F1412F861C700D08289 /* NSCoderGSA.h in Headers */ = {isa = PBXBuildFile; fileRef = E4AA8F1012F861C700D08289 /* NSCoderGSA.h */; };
 		E4AA8F1512F861C700D08289 /* NSCoderGSA.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AA8F1112F861C700D08289 /* NSCoderGSA.m */; };
 		E4CBFCF21536B0A30007E3AF /* BlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CBFCF11536B0A30007E3AF /* BlockAlertView.m */; };
-		E4CBFCF31536B0A30007E3AF /* BlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CBFCF11536B0A30007E3AF /* BlockAlertView.m */; };
 		E4CBFCF61536B0B10007E3AF /* BlockAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = E4CBFCF51536B0B10007E3AF /* BlockAlertView.h */; };
-		E4CBFCF71536B0B10007E3AF /* BlockAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = E4CBFCF51536B0B10007E3AF /* BlockAlertView.h */; };
 		E4CD2C0711F9FDB200D6C250 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BE411F9FDB200D6C250 /* Alert.m */; };
 		E4CD2C0A11F9FDB200D6C250 /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BE711F9FDB200D6C250 /* NSDateAdditions.m */; };
 		E4CD2C0C11F9FDB200D6C250 /* NSDictionaryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BE911F9FDB200D6C250 /* NSDictionaryAdditions.m */; };
@@ -92,20 +51,17 @@
 		E4CD2C2611F9FDB200D6C250 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2C0311F9FDB200D6C250 /* UIViewAdditions.m */; };
 		E4CD2C3311F9FFD800D6C250 /* NSMutableArrayStack.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2C3111F9FFD800D6C250 /* NSMutableArrayStack.m */; };
 		E4CE131D150CC5C6004FD83B /* UIButton+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4CE131B150CC5C6004FD83B /* UIButton+Additions.h */; };
-		E4CE131E150CC5C6004FD83B /* UIButton+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4CE131B150CC5C6004FD83B /* UIButton+Additions.h */; };
 		E4CE131F150CC5C6004FD83B /* UIButton+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CE131C150CC5C6004FD83B /* UIButton+Additions.m */; };
-		E4CE1320150CC5C6004FD83B /* UIButton+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CE131C150CC5C6004FD83B /* UIButton+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E41E710714359A7F00585262 /* ObjectToDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectToDictionary.h; path = Headers/ObjectToDictionary.h; sourceTree = "<group>"; };
 		E41E710814359A7F00585262 /* ObjectToDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectToDictionary.m; sourceTree = "<group>"; };
-		E4251A0311F9ED6800A98111 /* libAdditions-iPad.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libAdditions-iPad.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4251A0311F9ED6800A98111 /* libAdditions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAdditions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4251A0511F9ED6800A98111 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E4251A0711F9ED6800A98111 /* AdditionsLib_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdditionsLib_Prefix.pch; sourceTree = "<group>"; };
 		E4583AF312917024007F0577 /* dispatchShortcuts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dispatchShortcuts.h; sourceTree = "<group>"; };
 		E45ABBDE12393221002E9A6C /* LibAdditions-iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LibAdditions-iPad.h"; sourceTree = "<group>"; };
-		E45ABC1412393265002E9A6C /* libAdditions-iPhone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libAdditions-iPhone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E491C4AF1269A126001FF7F1 /* UIColorLibraryAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColorLibraryAdditions.h; sourceTree = "<group>"; };
 		E491C4B01269A126001FF7F1 /* UIColorLibraryAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColorLibraryAdditions.m; sourceTree = "<group>"; };
 		E4A7A85711FA0219008FAF55 /* Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alert.h; sourceTree = "<group>"; };
@@ -154,14 +110,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4251A0611F9ED6800A98111 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E45ABBF712393265002E9A6C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E45ABBF812393265002E9A6C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,8 +175,7 @@
 		E4251A0411F9ED6800A98111 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E4251A0311F9ED6800A98111 /* libAdditions-iPad.a */,
-				E45ABC1412393265002E9A6C /* libAdditions-iPhone.a */,
+				E4251A0311F9ED6800A98111 /* libAdditions.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -304,42 +251,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E45ABBF912393265002E9A6C /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E45ABBFA12393265002E9A6C /* Alert.h in Headers */,
-				E45ABBFB12393265002E9A6C /* CGGeometryAdditions.h in Headers */,
-				E45ABBFC12393265002E9A6C /* NSDateAdditions.h in Headers */,
-				E45ABBFD12393265002E9A6C /* NSDictionaryAdditions.h in Headers */,
-				E45ABBFE12393265002E9A6C /* NSInvocation(ForwardedConstruction).h in Headers */,
-				E45ABBFF12393265002E9A6C /* NSMutableArrayStack.h in Headers */,
-				E45ABC0012393265002E9A6C /* NSNotificationCenterAdditions.h in Headers */,
-				E45ABC0112393265002E9A6C /* NSStringAdditions.h in Headers */,
-				E45ABC0212393265002E9A6C /* Swizzle.h in Headers */,
-				E45ABC0312393265002E9A6C /* UIApplicationNetworkActivity.h in Headers */,
-				E45ABC0412393265002E9A6C /* UIDevice-hardware.h in Headers */,
-				E45ABC0512393265002E9A6C /* UIImageAdditions.h in Headers */,
-				E45ABC0612393265002E9A6C /* UIImageViewAddtions.h in Headers */,
-				E45ABC0712393265002E9A6C /* UIPopoverControllerSingle.h in Headers */,
-				E45ABC0812393265002E9A6C /* UIScrollViewAdditions.h in Headers */,
-				E45ABC0912393265002E9A6C /* UIViewAdditions.h in Headers */,
-				E45ABC0A12393265002E9A6C /* LibAdditions.h in Headers */,
-				E45ABC1012393265002E9A6C /* LibAdditions-iPad.h in Headers */,
-				E4583AF512917024007F0577 /* dispatchShortcuts.h in Headers */,
-				E4AA8F1212F861C700D08289 /* NSCoderGSA.h in Headers */,
-				E41E710A14359A7F00585262 /* ObjectToDictionary.h in Headers */,
-				E4CE131E150CC5C6004FD83B /* UIButton+Additions.h in Headers */,
-				E4CBFCF71536B0B10007E3AF /* BlockAlertView.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		E4251A0211F9ED6800A98111 /* AdditionsLib-iPad */ = {
+		E4251A0211F9ED6800A98111 /* AdditionsLib */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E4251A0A11F9ED6800A98111 /* Build configuration list for PBXNativeTarget "AdditionsLib-iPad" */;
+			buildConfigurationList = E4251A0A11F9ED6800A98111 /* Build configuration list for PBXNativeTarget "AdditionsLib" */;
 			buildPhases = (
 				E42519FF11F9ED6800A98111 /* Sources */,
 				E4251A0011F9ED6800A98111 /* Frameworks */,
@@ -349,26 +266,9 @@
 			);
 			dependencies = (
 			);
-			name = "AdditionsLib-iPad";
+			name = AdditionsLib;
 			productName = AdditionsLib;
-			productReference = E4251A0311F9ED6800A98111 /* libAdditions-iPad.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		E45ABBE212393265002E9A6C /* AdditionsLib-iPhone */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E45ABC1112393265002E9A6C /* Build configuration list for PBXNativeTarget "AdditionsLib-iPhone" */;
-			buildPhases = (
-				E45ABBE312393265002E9A6C /* Sources */,
-				E45ABBF712393265002E9A6C /* Frameworks */,
-				E45ABBF912393265002E9A6C /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "AdditionsLib-iPhone";
-			productName = AdditionsLib;
-			productReference = E45ABC1412393265002E9A6C /* libAdditions-iPhone.a */;
+			productReference = E4251A0311F9ED6800A98111 /* libAdditions.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -392,8 +292,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E4251A0211F9ED6800A98111 /* AdditionsLib-iPad */,
-				E45ABBE212393265002E9A6C /* AdditionsLib-iPhone */,
+				E4251A0211F9ED6800A98111 /* AdditionsLib */,
 			);
 		};
 /* End PBXProject section */
@@ -423,32 +322,6 @@
 				E41E710B14359A7F00585262 /* ObjectToDictionary.m in Sources */,
 				E4CE131F150CC5C6004FD83B /* UIButton+Additions.m in Sources */,
 				E4CBFCF21536B0A30007E3AF /* BlockAlertView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E45ABBE312393265002E9A6C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E45ABBE412393265002E9A6C /* Alert.m in Sources */,
-				E45ABBE512393265002E9A6C /* NSDateAdditions.m in Sources */,
-				E45ABBE612393265002E9A6C /* NSDictionaryAdditions.m in Sources */,
-				E45ABBE712393265002E9A6C /* NSInvocationForwardedConstruction.m in Sources */,
-				E45ABBE812393265002E9A6C /* NSNotificationCenterAdditions.m in Sources */,
-				E45ABBE912393265002E9A6C /* NSStringAdditions.m in Sources */,
-				E45ABBEA12393265002E9A6C /* Swizzle.m in Sources */,
-				E45ABBEB12393265002E9A6C /* UIApplicationNetworkActivity.m in Sources */,
-				E45ABBEC12393265002E9A6C /* UIDevice-hardware.m in Sources */,
-				E45ABBED12393265002E9A6C /* UIImageAdditions.m in Sources */,
-				E45ABBEE12393265002E9A6C /* UIImageViewAddtions.m in Sources */,
-				E45ABBF012393265002E9A6C /* UIScrollViewAdditions.m in Sources */,
-				E45ABBF112393265002E9A6C /* UIViewAdditions.m in Sources */,
-				E45ABBF212393265002E9A6C /* NSMutableArrayStack.m in Sources */,
-				E491C5111269A7A0001FF7F1 /* UIColorLibraryAdditions.m in Sources */,
-				E4AA8F1312F861C700D08289 /* NSCoderGSA.m in Sources */,
-				E41E710C14359A7F00585262 /* ObjectToDictionary.m in Sources */,
-				E4CE1320150CC5C6004FD83B /* UIButton+Additions.m in Sources */,
-				E4CBFCF31536B0A30007E3AF /* BlockAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,7 +378,8 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/lib;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "Additions-iPad";
+				PRODUCT_NAME = Additions;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -526,38 +400,9 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/lib;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "Additions-iPad";
+				PRODUCT_NAME = Additions;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 2;
-			};
-			name = Release;
-		};
-		E45ABC1212393265002E9A6C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				DSTROOT = /tmp/AdditionsLib.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = AdditionsLib_Prefix.pch;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INSTALL_PATH = /usr/local/lib;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "Additions-iPhone";
-			};
-			name = Debug;
-		};
-		E45ABC1312393265002E9A6C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				DSTROOT = /tmp/AdditionsLib.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = AdditionsLib_Prefix.pch;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INSTALL_PATH = /usr/local/lib;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "Additions-iPhone";
 			};
 			name = Release;
 		};
@@ -592,23 +437,9 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/lib;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "Additions-iPad";
+				PRODUCT_NAME = Additions;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 2;
-			};
-			name = AdHoc;
-		};
-		E4D85015146582B3003FAC13 /* AdHoc */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				DSTROOT = /tmp/AdditionsLib.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = AdditionsLib_Prefix.pch;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INSTALL_PATH = /usr/local/lib;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "Additions-iPhone";
 			};
 			name = AdHoc;
 		};
@@ -625,22 +456,12 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E4251A0A11F9ED6800A98111 /* Build configuration list for PBXNativeTarget "AdditionsLib-iPad" */ = {
+		E4251A0A11F9ED6800A98111 /* Build configuration list for PBXNativeTarget "AdditionsLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4251A0B11F9ED6800A98111 /* Debug */,
 				E4251A0C11F9ED6800A98111 /* Release */,
 				E4D85014146582B3003FAC13 /* AdHoc */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E45ABC1112393265002E9A6C /* Build configuration list for PBXNativeTarget "AdditionsLib-iPhone" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E45ABC1212393265002E9A6C /* Debug */,
-				E45ABC1312393265002E9A6C /* Release */,
-				E4D85015146582B3003FAC13 /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

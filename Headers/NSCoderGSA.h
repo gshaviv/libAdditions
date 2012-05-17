@@ -10,11 +10,12 @@
 
 
 @interface NSCoder (GSA)
-- (void) encodeInt:(NSInteger)i forKey:(NSString*)key;
-- (void) encodeFloat:(float)n forKey:(NSString*)key;
-- (void) encodeBool:(BOOL)n forKey:(NSString*)key;
-- (NSUInteger) decodeUnsignedIntForKey:(NSString*)key default:(NSUInteger)d ;
-- (NSInteger) decodeIntForKey:(NSString*)key default:(NSInteger)d;
-- (float) decodeFloatForKey:(NSString*)key default:(float)d;
-- (BOOL) decodeBoolForKey:(NSString*)key default:(BOOL)d;
+- (void) encodeIntNumber:(NSInteger)i forKey:(NSString*)key;
+- (void) encodeFloatNumber:(float)n forKey:(NSString*)key;
+- (void) encodeBoolNumber:(BOOL)n forKey:(NSString*)key;
+
+- (NSUInteger) decodeUnsignedIntNumberForKey:(NSString*)key default:(NSUInteger)d ;
+- (NSInteger) decodeIntNumberForKey:(NSString*)key default:(NSInteger)d;
+- (float) decodeFloatNumberForKey:(NSString*)key default:(float)d;
+- (BOOL) decodeBoolNumberForKey:(NSString*)key default:(BOOL)d;
 @end
