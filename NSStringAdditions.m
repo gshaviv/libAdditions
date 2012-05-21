@@ -61,5 +61,13 @@
     return [NSDictionary dictionaryWithDictionary:pairs] ;
 }
 
++ (NSString *)globalUniqueIdentifier
+{
+	CFUUIDRef uuid = CFUUIDCreate(NULL);
+	NSString *str = CFBridgingRelease(CFUUIDCreateString(NULL, uuid));    
+	CFRelease(uuid);
+	
+	return str;
+}
 
 @end
