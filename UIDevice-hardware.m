@@ -267,5 +267,19 @@
     
     return outstring;
 }
+
++ (system_version_t) currentSystemVersion {
+static system_version_t ver = {
+    0,0,0
+};
+if (ver.major == 0) {
+    NSArray *a = [[[UIDevice currentDevice] systemVersion] componentsSeparatedByString:@"."];
+    ver.major = [[a objectAtIndex:0] intValue];
+    ver.minor = [[a objectAtIndex:1] intValue];
+    ver.patch = [[a objectAtIndex:2] intValue];
+}
+
+return ver;
+}
 @end
 

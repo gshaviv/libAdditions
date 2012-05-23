@@ -29,6 +29,12 @@
 #define IPHONE_SIMULATOR_IPHONE_NAMESTRING  @"iPhone Simulator"
 #define IPHONE_SIMULATOR_IPAD_NAMESTRING    @"iPad Simulator"
 
+typedef struct {
+    short major;
+    short minor;
+    short patch;
+} system_version_t;
+
 typedef enum {
     
      
@@ -84,4 +90,5 @@ typedef enum {
 
 - (NSString *) macaddress;
 + (BOOL) isIPad;
++ (system_version_t) currentSystemVersion;
 @end
