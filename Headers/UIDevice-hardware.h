@@ -91,4 +91,6 @@ typedef enum {
 - (NSString *) macaddress;
 + (BOOL) isIPad;
 + (system_version_t) currentSystemVersion;
++ (BOOL) currentSystemVersionAtLeast:(short)major :(short)minor :(short)patch;
++ (BOOL) currentSystemVersionIsLessThan:(short)major :(short)minor :(short)patch;
 @end

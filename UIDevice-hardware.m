@@ -269,20 +269,40 @@
 }
 
 + (system_version_t) currentSystemVersion {
-static system_version_t ver = {
-    0,0,0
-};
-if (ver.major == 0) {
-    NSArray *a = [[[UIDevice currentDevice] systemVersion] componentsSeparatedByString:@"."];
-    if (a.count > 0)
-        ver.major = [[a objectAtIndex:0] intValue];
-    if (a.count > 1)
-        ver.minor = [[a objectAtIndex:1] intValue];
-    if (a.count > 2)
-        ver.patch = [[a objectAtIndex:2] intValue];
+    static system_version_t ver = {
+        0,0,0
+    };
+    if (ver.major == 0) {
+        NSArray *a = [[[UIDevice currentDevice] systemVersion] componentsSeparatedByString:@"."];
+        if (a.count > 0)
+            ver.major = [[a objectAtIndex:0] intValue];
+        if (a.count > 1)
+            ver.minor = [[a objectAtIndex:1] intValue];
+        if (a.count > 2)
+            ver.patch = [[a objectAtIndex:2] intValue];
+    }
+    
+    
+    return ver;
 }
 
-return ver;
++ (BOOL) currentSystemVersionAtLeast:(short)major :(short)minor :(short)patch {
+    system_version_t ver = [UIDevice currentSystemVersion];
+    if (ver.major > major) {
+        return YES;
+    } else if (ver.major == major) {
+        if (ver.minor > minor) {
+            return YES;
+        } else if (ver.minor == minor) {
+            if (ver.patch >= patch) return YES;
+        }
+    }
+    return NO;
 }
+
++ (BOOL) currentSystemVersionIsLessThan:(short)major :(short)minor :(short)patch {
+    return ![UIDevice currentSystemVersionAtLeast:major :minor :patch-1];
+}
+
 @end
 
