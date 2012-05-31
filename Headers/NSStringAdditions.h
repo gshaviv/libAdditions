@@ -15,4 +15,5 @@
 - (NSDictionary*)dictionaryFromQueryUsingEncoding: (NSStringEncoding)encoding;
 - (int) hexValue;
 + (NSString *)globalUniqueIdentifier;
+- (NSString *)stringByEscapingToURLSafe;
 @end
