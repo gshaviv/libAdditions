@@ -134,7 +134,7 @@
             }
             else
             {
-                [tmpString appendFormat:@"&#%d;", oneChar];
+                [tmpString appendFormat:@"%%26%%23%d;", oneChar];
             }
         }
     }
