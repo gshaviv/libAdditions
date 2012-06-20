@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E404B0281592345C009F4FC9 /* BlockActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = E404B0261592345C009F4FC9 /* BlockActionSheet.h */; };
+		E404B0291592345C009F4FC9 /* BlockActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = E404B0271592345C009F4FC9 /* BlockActionSheet.m */; };
 		E41E710914359A7F00585262 /* ObjectToDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = E41E710714359A7F00585262 /* ObjectToDictionary.h */; };
 		E41E710B14359A7F00585262 /* ObjectToDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = E41E710814359A7F00585262 /* ObjectToDictionary.m */; };
 		E4251A0611F9ED6800A98111 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4251A0511F9ED6800A98111 /* Foundation.framework */; };
@@ -55,6 +57,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E404B0261592345C009F4FC9 /* BlockActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockActionSheet.h; sourceTree = "<group>"; };
+		E404B0271592345C009F4FC9 /* BlockActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlockActionSheet.m; path = Headers/BlockActionSheet.m; sourceTree = "<group>"; };
 		E41E710714359A7F00585262 /* ObjectToDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectToDictionary.h; path = Headers/ObjectToDictionary.h; sourceTree = "<group>"; };
 		E41E710814359A7F00585262 /* ObjectToDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectToDictionary.m; sourceTree = "<group>"; };
 		E4251A0311F9ED6800A98111 /* libAdditions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAdditions.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +135,7 @@
 		E42519FC11F9ED6800A98111 /* Additions */ = {
 			isa = PBXGroup;
 			children = (
+				E404B0271592345C009F4FC9 /* BlockActionSheet.m */,
 				E4CBFCF11536B0A30007E3AF /* BlockAlertView.m */,
 				E4CE131C150CC5C6004FD83B /* UIButton+Additions.m */,
 				E4CD2C3111F9FFD800D6C250 /* NSMutableArrayStack.m */,
@@ -183,6 +188,7 @@
 		E4A7A85611FA0219008FAF55 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				E404B0261592345C009F4FC9 /* BlockActionSheet.h */,
 				E4CBFCF51536B0B10007E3AF /* BlockAlertView.h */,
 				E4A7A87D11FA028A008FAF55 /* LibAdditions.h */,
 				E491C4AF1269A126001FF7F1 /* UIColorLibraryAdditions.h */,
@@ -248,6 +254,7 @@
 				E41E710914359A7F00585262 /* ObjectToDictionary.h in Headers */,
 				E4CE131D150CC5C6004FD83B /* UIButton+Additions.h in Headers */,
 				E4CBFCF61536B0B10007E3AF /* BlockAlertView.h in Headers */,
+				E404B0281592345C009F4FC9 /* BlockActionSheet.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +329,7 @@
 				E41E710B14359A7F00585262 /* ObjectToDictionary.m in Sources */,
 				E4CE131F150CC5C6004FD83B /* UIButton+Additions.m in Sources */,
 				E4CBFCF21536B0A30007E3AF /* BlockAlertView.m in Sources */,
+				E404B0291592345C009F4FC9 /* BlockActionSheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
