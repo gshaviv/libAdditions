@@ -70,6 +70,17 @@ typedef enum {
     
 } UIDevicePlatform;
 
+enum {
+    UIDeviceSupportsGPS    = 1 << 0,
+    UIDeviceBuiltInSpeaker = 1 << 1,
+    UIDeviceBuiltInCamera = 1 << 2,
+    UIDeviceBuiltInMicrophone = 1 << 3,
+    UIDeviceSupportsExternalMicrophone = 1 << 4,
+    UIDeviceSupportsTelephony = 1 << 5,
+    UIDeviceSupportsVibration = 1 << 6,
+    UIDeviceSupportsMagnetometer = 1 << 7,
+};
+
 @interface UIDevice (Hardware)
 - (NSString *) platform;
 + (NSString *) platform;
@@ -93,4 +104,6 @@ typedef enum {
 + (system_version_t) currentSystemVersion;
 + (BOOL) currentSystemVersionAtLeast:(short)major :(short)minor :(short)patch;
 + (BOOL) currentSystemVersionIsLessThan:(short)major :(short)minor :(short)patch;
++ (NSString*) appDeviceUniqueIdentifier;
++ (int) platformCapabilities;
 @end
