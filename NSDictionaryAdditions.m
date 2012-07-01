@@ -48,7 +48,14 @@
 	}
 	return 0;
 }
-
+- (CGRect) rectForKey:(id)key {
+    id v = [self objectForKey:key];
+    if (v) {
+        return [v CGRectValue];
+    } else {
+        return CGRectZero;
+    }
+}
 @end
 
 @implementation NSMutableDictionary (Additions)
@@ -61,6 +68,9 @@
 }
 - (void) setFloat:(Float32)f forKey:(id)key {
     [self setObject:[NSNumber numberWithFloat:f] forKey:key];
+}
+- (void) setCGRect:(CGRect)rect forKey:(id)key {
+    [self setObject:[NSValue valueWithCGRect:rect] forKey:key];
 }
 
 @end

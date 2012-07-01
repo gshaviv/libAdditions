@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 
 @interface NSDictionary (Additions)
 
@@ -17,6 +17,7 @@
 - (NSUInteger) unsignedIntegerForKey:(id)key default:(NSUInteger)defaultValue;
 - (float) floatForKey:(id)key;
 - (BOOL) boolForKey:(id)key;
+- (CGRect) rectForKey:(id)key;
 @end
 
 
@@ -25,5 +26,6 @@
 - (void) setInteger:(NSInteger)i forKey:(id)key;
 - (void) setUnsignedInteger:(NSUInteger)i forKey:(id)key;
 - (void) setFloat:(Float32)f forKey:(id)key;
+- (void) setCGRect:(CGRect)rect forKey:(id)key;
 
 @end
