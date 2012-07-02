@@ -16,4 +16,5 @@
 - (int) hexValue;
 + (NSString *)globalUniqueIdentifier;
 - (NSString *)stringByEscapingToURLSafe;
+@property (nonatomic, readonly) NSRange entireStringRange;
 @end

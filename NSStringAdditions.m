@@ -16,6 +16,10 @@
 	return n;
 }
 
+- (NSRange) entireStringRange {
+    return NSMakeRange(0, self.length);
+}
+
 - (NSString*)stringByAddingQueryDictionary:(NSDictionary*)query {
 	NSMutableArray* pairs = [NSMutableArray array];
 	for (NSString* key in [query keyEnumerator]) {
@@ -134,7 +138,7 @@
             }
             else
             {
-                [tmpString appendFormat:@"&#%d;", oneChar];
+                [tmpString appendFormat:@"%%26%%23%d;", oneChar];
             }
         }
     }
