@@ -12,7 +12,7 @@
 #include <net/if_dl.h>
 
 #import "UIDevice-Hardware.h"
-
+#import "NSStringAdditions.h"
 @implementation UIDevice (Hardware)
 /*
  Platforms
@@ -267,5 +267,85 @@
     
     return outstring;
 }
+
++ (system_version_t) currentSystemVersion {
+    static system_version_t ver = {
+        0,0,0
+    };
+    if (ver.major == 0) {
+        NSArray *a = [[[UIDevice currentDevice] systemVersion] componentsSeparatedByString:@"."];
+        if (a.count > 0)
+            ver.major = [[a objectAtIndex:0] intValue];
+        if (a.count > 1)
+            ver.minor = [[a objectAtIndex:1] intValue];
+        if (a.count > 2)
+            ver.patch = [[a objectAtIndex:2] intValue];
+    }
+    
+    
+    return ver;
+}
+
++ (BOOL) currentSystemVersionAtLeast:(short)major :(short)minor :(short)patch {
+    system_version_t ver = [UIDevice currentSystemVersion];
+    if (ver.major > major) {
+        return YES;
+    } else if (ver.major == major) {
+        if (ver.minor > minor) {
+            return YES;
+        } else if (ver.minor == minor) {
+            if (ver.patch >= patch) return YES;
+        }
+    }
+    return NO;
+}
+
++ (BOOL) currentSystemVersionIsLessThan:(short)major :(short)minor :(short)patch {
+    return ![UIDevice currentSystemVersionAtLeast:major :minor :patch-1];
+}
+
++ (int) platformType
+{
+    NSString *platform = [UIDevice platform];
+    if ([platform isEqualToString:@"iPhone1,1"]) return UIDevice1GiPhone;
+    if ([platform isEqualToString:@"iPhone1,2"]) return UIDevice3GiPhone;
+    if ([platform isEqualToString:@"iPhone2,1"]) return UIDevice3GSiPhone;
+    if ([platform isEqualToString:@"iPod1,1"])   return UIDevice1GiPod;
+    if ([platform isEqualToString:@"iPod2,1"])   return UIDevice2GiPod;
+    if ([platform isEqualToString:@"iPad1,1"])   return UIDevice1GiPad;
+    if ([platform hasPrefix:@"iPhone"]) return UIDeviceUnknowniPhone;
+    if ([platform hasPrefix:@"iPod"]) return UIDeviceUnknowniPod;
+    if ([platform hasPrefix:@"iPad"]) return UIDeviceUnknowniPad;
+    return UIDeviceUnknown;
+}
+
+
++ (int) platformCapabilities
+{
+	switch ([UIDevice platformType])
+	{
+		case UIDevice1GiPhone: return UIDeviceBuiltInSpeaker | UIDeviceBuiltInCamera | UIDeviceBuiltInMicrophone | UIDeviceSupportsExternalMicrophone | UIDeviceSupportsTelephony | UIDeviceSupportsVibration;
+		case UIDevice3GiPhone: return UIDeviceSupportsGPS | UIDeviceBuiltInSpeaker | UIDeviceBuiltInCamera | UIDeviceBuiltInMicrophone | UIDeviceSupportsExternalMicrophone | UIDeviceSupportsTelephony | UIDeviceSupportsVibration;
+		case UIDevice3GSiPhone: return UIDeviceSupportsGPS | UIDeviceBuiltInSpeaker | UIDeviceBuiltInCamera | UIDeviceBuiltInMicrophone | UIDeviceSupportsExternalMicrophone | UIDeviceSupportsTelephony | UIDeviceSupportsVibration | UIDeviceSupportsMagnetometer;
+		case UIDeviceUnknowniPhone: return UIDeviceBuiltInSpeaker | UIDeviceBuiltInCamera | UIDeviceBuiltInMicrophone | UIDeviceSupportsExternalMicrophone | UIDeviceSupportsTelephony | UIDeviceSupportsVibration;
+            
+		case UIDevice1GiPod: return 0;
+		case UIDevice2GiPod: return UIDeviceBuiltInSpeaker | UIDeviceBuiltInMicrophone | UIDeviceSupportsExternalMicrophone;
+		case UIDeviceUnknowniPod: return 0;
+        case UIDeviceUnknowniPad: return UIDeviceBuiltInSpeaker | UIDeviceBuiltInCamera | UIDeviceBuiltInMicrophone | UIDeviceSupportsExternalMicrophone;
+            
+		default: return 0;
+	}
+}
+
++ (NSString*) appDeviceUniqueIdentifier {
+    NSString *uid = [[NSUserDefaults standardUserDefaults] objectForKey:@"app.udid"];
+    if (!uid) {
+        uid = [NSString globalUniqueIdentifier];
+        [[NSUserDefaults standardUserDefaults] setObject:uid forKey:@"app.udid"];
+    }
+    return uid;
+}
+
 @end
 

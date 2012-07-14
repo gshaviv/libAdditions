@@ -14,4 +14,7 @@
 - (NSString*)stringByAddingQueryDictionary:(NSDictionary*)query ;
 - (NSDictionary*)dictionaryFromQueryUsingEncoding: (NSStringEncoding)encoding;
 - (int) hexValue;
++ (NSString *)globalUniqueIdentifier;
+- (NSString *)stringByEscapingToURLSafe;
+@property (nonatomic, readonly) NSRange entireStringRange;
 @end

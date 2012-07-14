@@ -47,8 +47,15 @@ static inline CGPoint CGRectCenter(CGRect rect) {
 }
 
 static inline CGRect CGRectRound(CGRect rect) {
-    return CGRectMake(rintf(rect.origin.x),rintf(rect.origin.y),rintf(rect.size.width),rintf(rect.size.height));
+    return CGRectMake(rintf(rect.origin.x),rintf(rect.origin.y),ceilf(rect.size.width),ceilf(rect.size.height));
 }
+
+static inline CGRect CGRectMakeRound(float x, float y, float width, float height) {
+    return CGRectMake(rintf(x),rintf(y),ceilf(width),ceilf(height));
+}
+
+
+
 
 
 #define NSRangeEnd(r) (r.location + r.length)
