@@ -204,6 +204,24 @@ CGSize sizeThatFitsKeepingAspectRatio(CGSize originalSize, CGSize sizeToFit)
 	return nil;
 }
 
+- (UIView *)findFirstResponder
+{
+    if (self.isFirstResponder) {
+        return self;
+    }
+    for (UIView *subView in self.subviews) {
+        if ([subView isFirstResponder]){
+            return subView;
+        }
+        UIView *fr = [subView findFirstResponder];
+        if (fr){
+            return fr;
+        }
+    }
+    return nil;
+}
+
+
 - (void) makeScrollViewGestureRecognizersRequireFail:(UIGestureRecognizer*)toFail {
 	if ([self isKindOfClass:[UIScrollView class]]) {
 		[(UIScrollView*)self makeGestureRecognizersRequireFail:toFail];
