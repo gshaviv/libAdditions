@@ -22,13 +22,10 @@
 
 - (NSString*)stringByAddingQueryDictionary:(NSDictionary*)query {
 	NSMutableArray* pairs = [NSMutableArray array];
-	for (NSString* key in [query keyEnumerator]) {
-		NSString* value = [query objectForKey:key];
-//		value = [value stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
-//        value = [value stringByReplacingOccurrencesOfString:@"&" withString:@"%26"];
-		NSString* pair = [NSString stringWithFormat:@"%@=%@", key, [value stringByEscapingToURLSafe]];
+    [query enumerateKeysAndObjectsUsingBlock:^(id key, id value, BOOL *stop) {
+        NSString* pair = [NSString stringWithFormat:@"%@=%@", key, [value stringByEscapingToURLSafe]];
 		[pairs addObject:pair];
-	}
+    }];
 	
 	NSString* params = [pairs componentsJoinedByString:@"&"];
 	if ([self rangeOfString:@"?"].location == NSNotFound) {
@@ -67,7 +64,7 @@
 + (NSString *)globalUniqueIdentifier
 {
 	CFUUIDRef uuid = CFUUIDCreate(NULL);
-	NSString *str = CFBridgingRelease(CFUUIDCreateString(NULL, uuid));    
+	NSString *str = CFBridgingRelease(CFUUIDCreateString(NULL, uuid));
 	CFRelease(uuid);
 	
 	return str;
