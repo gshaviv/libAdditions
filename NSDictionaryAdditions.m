@@ -16,7 +16,7 @@
 }
 
 - (NSInteger) integerForKey:(id)key default:(NSInteger)defaultValue {
-	id num = [self objectForKey:key];
+	id num = self[key];
 	if (num) {
 		return [num intValue];
 	}
@@ -24,7 +24,7 @@
 }
 
 - (NSUInteger) unsignedIntegerForKey:(id)key default:(NSUInteger)defaultValue {
-	id num = [self objectForKey:key];
+	id num = self[key];
 	if (num) {
 		return [num unsignedIntegerValue];
 	}
@@ -35,21 +35,21 @@
 	return [self unsignedIntegerForKey:key default:0];
 }
 - (BOOL) boolForKey:(id)key {
-	NSNumber* num = [self objectForKey:key];
+	NSNumber* num = self[key];
 	if (num == nil) {
 		return NO;
 	}
 	return [num boolValue];
 }
 - (float) floatForKey:(id)key  {
-	id num = [self objectForKey:key];
+	id num = self[key];
 	if (num) {
 		return [num floatValue];
 	}
 	return 0;
 }
 - (CGRect) rectForKey:(id)key {
-    id v = [self objectForKey:key];
+    id v = self[key];
     if (v) {
         return [v CGRectValue];
     } else {
@@ -61,16 +61,16 @@
 @implementation NSMutableDictionary (Additions)
 
 - (void) setInteger:(NSInteger)i forKey:(id)key {
-	[self setObject:[NSNumber numberWithInt:i] forKey:key];
+	self[key] = @(i);
 }
 - (void) setUnsignedInteger:(NSUInteger)i forKey:(id)key {
-	[self setObject:[NSNumber numberWithUnsignedInt:i] forKey:key];
+	self[key] = @(i);
 }
 - (void) setFloat:(Float32)f forKey:(id)key {
-    [self setObject:[NSNumber numberWithFloat:f] forKey:key];
+    self[key] = @(f);
 }
 - (void) setCGRect:(CGRect)rect forKey:(id)key {
-    [self setObject:[NSValue valueWithCGRect:rect] forKey:key];
+    self[key] = [NSValue valueWithCGRect:rect];
 }
 
 @end

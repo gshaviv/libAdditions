@@ -187,7 +187,7 @@ CGSize sizeThatFitsKeepingAspectRatio(CGSize originalSize, CGSize sizeToFit)
 - (NSInteger) indexOfView:(UIView*)view {
 	NSArray *subviews = self.subviews;
 	for (int i=0;i<subviews.count;i++) {
-		if ([[subviews objectAtIndex:i] isEqual:view]) {
+		if ([subviews[i] isEqual:view]) {
 			return i;
 		}
 	}
@@ -282,6 +282,8 @@ CGSize sizeThatFitsKeepingAspectRatio(CGSize originalSize, CGSize sizeToFit)
 - (void)shake {
 	[self shakeWithOffset:40.0 damping:0.85 duration:1.5 maxShakes:30];
 }
+
+
 
 @end
 #endif

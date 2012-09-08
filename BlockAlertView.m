@@ -30,7 +30,7 @@
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex >= 0 && buttonIndex < blocksArray.count) {
-        void(^block)(void) = [self.blocksArray objectAtIndex:buttonIndex];
+        void(^block)(void) = (self.blocksArray)[buttonIndex];
         block();
     }
 }

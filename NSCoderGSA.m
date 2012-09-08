@@ -12,15 +12,15 @@
 @implementation NSCoder (GSA)
 
 - (void) encodeIntNumber:(NSInteger)i forKey:(NSString*)key {
-	[self encodeObject:[NSNumber numberWithInt:i] forKey:key];
+	[self encodeObject:@(i) forKey:key];
 }
 
 - (void) encodeFloatNumber:(float)n forKey:(NSString*)key {
-	[self encodeObject:[NSNumber numberWithFloat:n] forKey:key];
+	[self encodeObject:@(n) forKey:key];
 }
 
 - (void) encodeBoolNumber:(BOOL)n forKey:(NSString*)key {
-	[self encodeObject:[NSNumber numberWithBool:n] forKey:key];
+	[self encodeObject:@(n) forKey:key];
 }
 
 - (NSUInteger) decodeUnsignedIntNumberForKey:(NSString*)key default:(NSUInteger)d {

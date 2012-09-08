@@ -10,7 +10,7 @@
 
 @implementation NSDictionary (ObjectToDictionary)
 - (id) createObject {
-    Class objclass = NSClassFromString([self objectForKey:@"class"]);
+    Class objclass = NSClassFromString(self[@"class"]);
     if (!objclass) return nil;
     NSLog(@"objclas=%@",objclass);
     return [[objclass alloc] initWithContentOfDictionary:self];
@@ -41,25 +41,25 @@
 
 - (NSDictionary*) contentsTodictionary {
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    [dict setObject:NSStringFromClass([self class]) forKey:@"class"];
-    [dict setObject:[self arrayWithDictionaries] forKey:@"array"];
+    dict[@"class"] = NSStringFromClass([self class]);
+    dict[@"array"] = [self arrayWithDictionaries];
     return dict;
 }
 
 - (id) initWithContentOfDictionary:(NSDictionary *)dict {
-    return [NSArray arrayWithArray:[self readArray:[dict objectForKey:@"array"]]];
+    return [NSArray arrayWithArray:[self readArray:dict[@"array"]]];
 }
 
 @end
 
 @implementation NSMutableArray (ObjectToDictionary)
 - (id) initWithContentOfDictionary:(NSDictionary *)dict {
-    return [self readArray:[dict objectForKey:@"array"]];
+    return [self readArray:dict[@"array"]];
 }
 - (NSDictionary*) contentsTodictionary {
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    [dict setObject:NSStringFromClass([self class]) forKey:@"class"];
-    [dict setObject:[self arrayWithDictionaries] forKey:@"array"];
+    dict[@"class"] = NSStringFromClass([self class]);
+    dict[@"array"] = [self arrayWithDictionaries];
     return dict;
 }
 @end

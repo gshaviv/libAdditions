@@ -19,7 +19,7 @@
 
 
 - (UIScrollView*)findFirstScrollView;
-
+- (UIView *)findFirstResponder;
 - (UIView*)firstViewOfClass:(Class)cls;
 
 - (UIView*)firstParentOfClass:(Class)cls;
@@ -35,7 +35,6 @@
 - (UIViewController*)viewController; // return the view controller of this view or a parent view
 - (void) makeScrollViewGestureRecognizersRequireFail:(UIGestureRecognizer*)toFail; // any parent scrollview will let toFail fail first
 - (void) makeScrollViewGestureRecognizersRequireViewToFail:(UIView*)toFail;
-
 @end
 
 #ifdef QUARTZADDITIONS
