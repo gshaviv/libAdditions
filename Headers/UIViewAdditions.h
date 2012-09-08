@@ -35,6 +35,13 @@
 - (UIViewController*)viewController; // return the view controller of this view or a parent view
 - (void) makeScrollViewGestureRecognizersRequireFail:(UIGestureRecognizer*)toFail; // any parent scrollview will let toFail fail first
 - (void) makeScrollViewGestureRecognizersRequireViewToFail:(UIView*)toFail;
+- (void) setCornerRadius:(NSNumber*)rad;
+- (void) setBorderWidth:(NSNumber*)width;
+- (void) setBorderColor:(NSString*)webColor;
+- (void) setShadowOffset:(CGSize)offset;
+- (void) setShadowColor:(UIColor*)webColor;
+- (void) setShadowOpacity:(NSString*)number;
+- (void) setShadowRadius:(NSNumber*)number;
 @end
 
 #ifdef QUARTZADDITIONS

@@ -228,9 +228,7 @@
 	NSMethodSignature *signature =
 		[target methodSignatureForSelector:aSelector];
 	
-	NSAssert3(signature != nil,
-		@"NSInvocation(ForwardedConstruction) error: object %p of class '%@' does not implement %s",
-		target, [target class], sel_getName(aSelector));
+
 	
 	return signature;
 }
