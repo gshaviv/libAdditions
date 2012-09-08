@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 
 @interface NSDictionary (Additions)
-
+- (NSDictionary*) dictionaryByMergingKeysAndValuesFromDictionary:(NSDictionary*)toMerge;
 - (NSInteger) integerForKey:(id)key;
 - (NSInteger) integerForKey:(id)key default:(NSInteger)defaultValue;
 - (NSUInteger) unsignedIntegerForKey:(id)key;
@@ -22,7 +22,7 @@
 
 
 @interface NSMutableDictionary (Additions)
-
+- (void) mergeKeysAndValuesFromDictionary:(NSDictionary*)toMerge;
 - (void) setInteger:(NSInteger)i forKey:(id)key;
 - (void) setUnsignedInteger:(NSUInteger)i forKey:(id)key;
 - (void) setFloat:(Float32)f forKey:(id)key;

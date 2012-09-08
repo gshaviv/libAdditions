@@ -56,10 +56,23 @@
         return CGRectZero;
     }
 }
+- (NSDictionary*) dictionaryByMergingKeysAndValuesFromDictionary:(NSDictionary*)toMerge {
+    if (!toMerge) return self;
+    NSMutableDictionary *merge = [NSMutableDictionary dictionaryWithDictionary:self];
+    [toMerge enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        [merge setObject:obj forKey:key];
+    }];
+    return merge;
+}
 @end
 
 @implementation NSMutableDictionary (Additions)
-
+- (void) mergeKeysAndValuesFromDictionary:(NSDictionary*)toMerge {
+    if (!toMerge) return;
+    [toMerge enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        [self setObject:obj forKey:key];
+    }];
+}
 - (void) setInteger:(NSInteger)i forKey:(id)key {
 	[self setObject:[NSNumber numberWithInt:i] forKey:key];
 }
