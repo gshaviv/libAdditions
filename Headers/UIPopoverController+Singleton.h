@@ -12,12 +12,8 @@
 #import <UIKit/UIKit.h>
 
 
-@interface UIPopoverController (Single)
-
-+ (void) primeCategorySingle;
+@interface PopoverController
 + (UIPopoverController*) visibleController;
-+ (void) overrideArrowDirection:(UIPopoverArrowDirection)dir;
-
-- (void) oldSetDelegate:(id)d;//internal
-
++ (void) presentPopover:(UIPopoverController*)popoverController fromRect:(CGRect)rect inView:(UIView *)view permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections animated:(BOOL)animated;
++ (void) presentPopover:(UIPopoverController*)popoverController fromBarButtonItem:(UIBarButtonItem *)item permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections animated:(BOOL)animated;
 @end
