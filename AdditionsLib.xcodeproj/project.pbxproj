@@ -62,7 +62,7 @@
 		E404B0261592345C009F4FC9 /* BlockActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockActionSheet.h; sourceTree = "<group>"; };
 		E404B0271592345C009F4FC9 /* BlockActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlockActionSheet.m; path = Headers/BlockActionSheet.m; sourceTree = "<group>"; };
 		E41E710714359A7F00585262 /* ObjectToDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectToDictionary.h; path = Headers/ObjectToDictionary.h; sourceTree = "<group>"; };
-		E41E710814359A7F00585262 /* ObjectToDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectToDictionary.m; sourceTree = "<group>"; };
+		E41E710814359A7F00585262 /* ObjectToDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ObjectToDictionary.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E422166515FB3AA70011CF83 /* UIColor+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HTML.m"; sourceTree = "<group>"; };
 		E422166615FB3AA70011CF83 /* UIColor+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HTML.h"; sourceTree = "<group>"; };
 		E4251A0311F9ED6800A98111 /* libAdditions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAdditions.a; sourceTree = BUILT_PRODUCTS_DIR; };
