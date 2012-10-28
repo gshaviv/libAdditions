@@ -10,7 +10,7 @@
 
 #import "UIPopoverController+Singleton.h"
 
-static __weak UIPopoverController *visibleController;
+static UIPopoverController *visibleController;
 
 
 @implementation PopoverController
@@ -26,7 +26,12 @@ static __weak UIPopoverController *visibleController;
 }
 
 + (UIPopoverController*) visibleController {
-	return visibleController;
+    if (visibleController && [visibleController isPopoverVisible]) {
+        return visibleController;
+    } else {
+        visibleController = nil;
+    }
+    return nil;
 }
 
 @end
