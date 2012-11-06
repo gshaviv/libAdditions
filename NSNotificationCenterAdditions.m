@@ -30,18 +30,18 @@
 	if ([NSThread isMainThread]) return [self postNotificationName:name object:object userInfo:userInfo];
 	
 	NSMutableDictionary *info = [[NSMutableDictionary allocWithZone:nil] init];
-	[info setObject:name forKey:@"name"];
-	if( object ) [info setObject:object forKey:@"object"];
-	if( userInfo ) [info setObject:userInfo forKey:@"userInfo"];
+	info[@"name"] = name;
+	if( object ) info[@"object"] = object;
+	if( userInfo ) info[@"userInfo"] = userInfo;
 	
 	[[self class] performSelectorOnMainThread:@selector( _postNotificationName: ) withObject:info waitUntilDone:wait];
 //	[info release];
 }
 
 + (void) _postNotificationName:(NSDictionary *) info {
-	NSString *name = [info objectForKey:@"name"];
-	id object = [info objectForKey:@"object"];
-	NSDictionary *userInfo = [info objectForKey:@"userInfo"];
+	NSString *name = info[@"name"];
+	id object = info[@"object"];
+	NSDictionary *userInfo = info[@"userInfo"];
 	
 	[[self defaultCenter] postNotificationName:name object:object userInfo:userInfo];
 }
@@ -57,20 +57,20 @@
 	if ([NSThread isMainThread]) return [self enqueueNotification:notification postingStyle:postingStyle coalesceMask:coalesceMask forModes:modes];
 	
 	NSMutableDictionary *info = [[NSMutableDictionary allocWithZone:nil] init];
-	[info setObject:notification forKey:@"notification"];
-	[info setObject:[NSNumber numberWithUnsignedInt:postingStyle] forKey:@"postingStyle"];
-	[info setObject:[NSNumber numberWithUnsignedInt:coalesceMask] forKey:@"coalesceMask"];
-	if( modes ) [info setObject:modes forKey:@"modes"];
+	info[@"notification"] = notification;
+	info[@"postingStyle"] = [NSNumber numberWithUnsignedInt:postingStyle];
+	info[@"coalesceMask"] = @(coalesceMask);
+	if( modes ) info[@"modes"] = modes;
 	
 	[[self class] performSelectorOnMainThread:@selector( _enqueueNotification: ) withObject:info waitUntilDone:NO];
 //	[info release];
 }
 
 + (void) _enqueueNotification:(NSDictionary *) info {
-	NSNotification *notification = [info objectForKey:@"notification"];
-	NSPostingStyle postingStyle = [[info objectForKey:@"postingStyle"] unsignedIntValue];
-	unsigned coalesceMask = [[info objectForKey:@"coalesceMask"] unsignedIntValue];
-	NSArray *modes = [info objectForKey:@"modes"];
+	NSNotification *notification = info[@"notification"];
+	NSPostingStyle postingStyle = [info[@"postingStyle"] unsignedIntValue];
+	unsigned coalesceMask = [info[@"coalesceMask"] unsignedIntValue];
+	NSArray *modes = info[@"modes"];
 	
 	[[self defaultQueue] enqueueNotification:notification postingStyle:postingStyle coalesceMask:coalesceMask forModes:modes];
 }

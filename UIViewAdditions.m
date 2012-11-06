@@ -6,9 +6,8 @@
 //  Copyright 2009 .. All rights reserved.
 //
 
-#import "UIViewAdditions.h"
-#import "UIScrollViewAdditions.h"
-#import "CGGeometryAdditions.h"
+#import "libAdditions.h"
+#import <QuartzCore/QuartzCore.h>
 
 CGSize sizeThatFitsKeepingAspectRatio(CGSize originalSize, CGSize sizeToFit)
 {
@@ -29,6 +28,30 @@ CGSize sizeThatFitsKeepingAspectRatio(CGSize originalSize, CGSize sizeToFit)
 
 
 @implementation UIView (Additions)
+- (void) setCornerRadius:(NSNumber*)rad {
+    self.layer.cornerRadius = [rad floatValue];
+}
+- (void) setBorderWidth:(NSNumber*)width {
+    self.layer.borderWidth = [width floatValue];
+}
+- (void) setBorderColor:(NSString*)webColor {
+    self.layer.borderColor = [UIColor colorWithHTMLName:webColor].CGColor;
+}
+- (void) setShadowOffset:(CGSize)offset {
+    self.layer.shadowOffset = offset;
+}
+- (void) setShadowColor:(UIColor*)webColor {
+    if ([webColor isKindOfClass:[NSString class]]) {
+        webColor = [UIColor colorWithHTMLName:(id)webColor];
+    }
+    self.layer.shadowColor  =webColor.CGColor;
+}
+- (void) setShadowOpacity:(NSString*)number {
+    self.layer.shadowOpacity = [number floatValue];
+}
+- (void) setShadowRadius:(NSNumber*)number {
+    self.layer.shadowRadius = [number floatValue];
+}
 
 - (CGFloat)left {
 	return self.frame.origin.x;
@@ -187,7 +210,7 @@ CGSize sizeThatFitsKeepingAspectRatio(CGSize originalSize, CGSize sizeToFit)
 - (NSInteger) indexOfView:(UIView*)view {
 	NSArray *subviews = self.subviews;
 	for (int i=0;i<subviews.count;i++) {
-		if ([[subviews objectAtIndex:i] isEqual:view]) {
+		if ([subviews[i] isEqual:view]) {
 			return i;
 		}
 	}
@@ -203,6 +226,24 @@ CGSize sizeThatFitsKeepingAspectRatio(CGSize originalSize, CGSize sizeToFit)
 	}
 	return nil;
 }
+
+- (UIView *)findFirstResponder
+{
+    if (self.isFirstResponder) {
+        return self;
+    }
+    for (UIView *subView in self.subviews) {
+        if ([subView isFirstResponder]){
+            return subView;
+        }
+        UIView *fr = [subView findFirstResponder];
+        if (fr){
+            return fr;
+        }
+    }
+    return nil;
+}
+
 
 - (void) makeScrollViewGestureRecognizersRequireFail:(UIGestureRecognizer*)toFail {
 	if ([self isKindOfClass:[UIScrollView class]]) {
@@ -230,7 +271,6 @@ CGSize sizeThatFitsKeepingAspectRatio(CGSize originalSize, CGSize sizeToFit)
 @end
 
 #ifdef QUARTZADDITIONS
-#import <QuartzCore/QuartzCore.h>
 @implementation UIView (QuartzAdditions)
 - (UIImage*) renderToImage {
     float scale = self.layer.contentsScale;
@@ -264,6 +304,8 @@ CGSize sizeThatFitsKeepingAspectRatio(CGSize originalSize, CGSize sizeToFit)
 - (void)shake {
 	[self shakeWithOffset:40.0 damping:0.85 duration:1.5 maxShakes:30];
 }
+
+
 
 @end
 #endif

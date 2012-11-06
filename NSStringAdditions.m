@@ -22,13 +22,10 @@
 
 - (NSString*)stringByAddingQueryDictionary:(NSDictionary*)query {
 	NSMutableArray* pairs = [NSMutableArray array];
-	for (NSString* key in [query keyEnumerator]) {
-		NSString* value = [query objectForKey:key];
-//		value = [value stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
-//        value = [value stringByReplacingOccurrencesOfString:@"&" withString:@"%26"];
-		NSString* pair = [NSString stringWithFormat:@"%@=%@", key, [value stringByEscapingToURLSafe]];
+    [query enumerateKeysAndObjectsUsingBlock:^(id key, id value, BOOL *stop) {
+        NSString* pair = [NSString stringWithFormat:@"%@=%@", key, [value stringByEscapingToURLSafe]];
 		[pairs addObject:pair];
-	}
+    }];
 	
 	NSString* params = [pairs componentsJoinedByString:@"&"];
 	if ([self rangeOfString:@"?"].location == NSNotFound) {
@@ -56,8 +53,8 @@
         [scanner scanCharactersFromSet:delimiterSet intoString:NULL] ;
 		NSArray* kvPair = [pairString componentsSeparatedByString:@"="] ;
         if ([kvPair count] == 2) {
-			NSString* key = [[kvPair objectAtIndex:0] stringByReplacingPercentEscapesUsingEncoding:encoding] ; NSString* value = [[kvPair objectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:encoding] ;
-            [pairs setObject:value forKey:key] ;
+			NSString* key = [kvPair[0] stringByReplacingPercentEscapesUsingEncoding:encoding] ; NSString* value = [kvPair[1] stringByReplacingPercentEscapesUsingEncoding:encoding] ;
+            pairs[key] = value ;
         }
     }
 
@@ -67,7 +64,7 @@
 + (NSString *)globalUniqueIdentifier
 {
 	CFUUIDRef uuid = CFUUIDCreate(NULL);
-	NSString *str = CFBridgingRelease(CFUUIDCreateString(NULL, uuid));    
+	NSString *str = CFBridgingRelease(CFUUIDCreateString(NULL, uuid));
 	CFRelease(uuid);
 	
 	return str;
@@ -78,42 +75,40 @@
     static dispatch_once_t predicate;
     
     dispatch_once(&predicate, ^{
-        entityReverseLookup = [[NSDictionary alloc] initWithObjectsAndKeys:
-                               @"%25",@"%",
-                               @"%21",@"!",
-                               @"%23",@"#",
-                               @"%24",@"$",
-                               @"%26",@"&",
-                               @"%27",@"'",
-                               @"%28",@"(",
-                               @"%29",@")",
-                               @"%2A",@"*",
-                               @"%2B",@"+",
-                               @"%2C",@",",
-                               @"%2F",@"/",
-                               @"%3A",@":",
-                               @"%3B",@";",
-                               @"%3D",@"=",
-                               @"%3F",@"?",
-                               @"%40",@"@",
-                               @"%5B",@"[",
-                               @"%5D",@"]",
-                               @"%0A",@"\n",
-                               @"%20",@" ",
-                               @"%22",@"\"",
-                               @"%2D",@"-",
-                               @"%2E",@".",
-                               @"%3C",@"<",
-                               @"%3E",@">",
-                               @"%5C",@"\\",
-                               @"%5E",@"^",
-                               @"%5F",@"_",
-                               @"%60",@"`",
-                               @"%7B",@"{",
-                               @"%7C",@"|",
-                               @"%7D",@"}",
-                               @"%7E",@"~",
-                               nil];
+        entityReverseLookup = @{@"%": @"%25",
+                               @"!": @"%21",
+                               @"#": @"%23",
+                               @"$": @"%24",
+                               @"&": @"%26",
+                               @"'": @"%27",
+                               @"(": @"%28",
+                               @")": @"%29",
+                               @"*": @"%2A",
+                               @"+": @"%2B",
+                               @",": @"%2C",
+                               @"/": @"%2F",
+                               @":": @"%3A",
+                               @";": @"%3B",
+                               @"=": @"%3D",
+                               @"?": @"%3F",
+                               @"@": @"%40",
+                               @"[": @"%5B",
+                               @"]": @"%5D",
+                               @"\n": @"%0A",
+                               @" ": @"%20",
+                               @"\"": @"%22",
+                               @"-": @"%2D",
+                               @".": @"%2E",
+                               @"<": @"%3C",
+                               @">": @"%3E",
+                               @"\\": @"%5C",
+                               @"^": @"%5E",
+                               @"_": @"%5F",
+                               @"`": @"%60",
+                               @"{": @"%7B",
+                               @"|": @"%7C",
+                               @"}": @"%7D",
+                               @"~": @"%7E"};
         
     });
     
@@ -124,7 +119,7 @@
         unichar oneChar = [self characterAtIndex:i];
         
         NSString *subKey = [self substringWithRange:NSMakeRange(i, 1)];
-        NSString *entity = [entityReverseLookup objectForKey:subKey];
+        NSString *entity = entityReverseLookup[subKey];
         
         if (entity)
         {

@@ -11,7 +11,6 @@
 typedef void (^actionViewButtonHit)(int buttonIndex);
 
 @interface BlockActionSheet : UIActionSheet <UIActionSheetDelegate>
-@property (nonatomic, copy) actionViewButtonHit actionButtonHit;
 
 - (void) showFromToolbar: (UIToolbar *) view buttonBlock: (actionViewButtonHit) block;
 - (void) showFromTabBar: (UITabBar *) view buttonBlock: (actionViewButtonHit) block;

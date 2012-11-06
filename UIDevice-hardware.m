@@ -53,6 +53,11 @@
 	return cd.userInterfaceIdiom == UIUserInterfaceIdiomPad;
 }
 
++ (BOOL) hasWidePhoneScreen {
+    UIDevice *cd = [UIDevice currentDevice];
+	return cd.userInterfaceIdiom == UIUserInterfaceIdiomPhone && [[UIScreen mainScreen] applicationFrame].size.height > 500;
+}
+
 + (NSString*) platform {
     return [[UIDevice currentDevice] platform];
 }
@@ -68,7 +73,7 @@
     char *answer = malloc(size);
     sysctlbyname(typeSpecifier, answer, &size, NULL, 0);
     
-    NSString *results = [NSString stringWithCString:answer encoding: NSUTF8StringEncoding];
+    NSString *results = @(answer);
     
     free(answer);
     return results;
@@ -130,13 +135,13 @@
 - (NSNumber *) totalDiskSpace
 {
     NSDictionary *fattributes = [[NSFileManager defaultManager] attributesOfFileSystemForPath:NSHomeDirectory() error:nil];
-    return [fattributes objectForKey:NSFileSystemSize];
+    return fattributes[NSFileSystemSize];
 }
 
 - (NSNumber *) freeDiskSpace
 {
     NSDictionary *fattributes = [[NSFileManager defaultManager] attributesOfFileSystemForPath:NSHomeDirectory() error:nil];
-    return [fattributes objectForKey:NSFileSystemFreeSize];
+    return fattributes[NSFileSystemFreeSize];
 }
 
 #pragma mark platform type and name utils
@@ -225,7 +230,7 @@
 {
     int                 mib[6];
     size_t              len;
-    char                *buf;
+    char                *buf = 0;
     unsigned char       *ptr;
     struct if_msghdr    *ifm;
     struct sockaddr_dl  *sdl;
@@ -253,6 +258,7 @@
     
     if (sysctl(mib, 6, buf, &len, NULL, 0) < 0) {
         printf("Error: sysctl, take 2");
+        if (buf) free(buf);
         return NULL;
     }
     
@@ -275,11 +281,11 @@
     if (ver.major == 0) {
         NSArray *a = [[[UIDevice currentDevice] systemVersion] componentsSeparatedByString:@"."];
         if (a.count > 0)
-            ver.major = [[a objectAtIndex:0] intValue];
+            ver.major = [a[0] intValue];
         if (a.count > 1)
-            ver.minor = [[a objectAtIndex:1] intValue];
+            ver.minor = [a[1] intValue];
         if (a.count > 2)
-            ver.patch = [[a objectAtIndex:2] intValue];
+            ver.patch = [a[2] intValue];
     }
     
     

@@ -1,4 +1,5 @@
 #import "UIImageAdditions.h"
+#import "CGGeometryAdditions.h"
 
 @implementation UIImage (TTCategory)
 
@@ -102,6 +103,15 @@
 	return viewImage;
 }
 
+- (UIImage*)imageWithSize:(CGSize)size contentMode:(UIViewContentMode)contentMode {
+    //	UIGraphicsBeginImageContext(CGSizeMake(width, height));
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);
+    [self drawInRect:CGRectMake(0, 0, size.width, size.height) contentMode:contentMode];
+	UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	return viewImage;
+}
+
 - (UIImage*) imageThatFitsDimension:(CGFloat)maxDim {
     CGSize size = self.size;
     if (size.width > size.height) {
@@ -168,7 +178,7 @@
         imageSize.height = floor((imageSize.height/imageSize.width) * rect.size.width);
         imageSize.width = rect.size.width;
       }
-      rect = CGRectMake(rect.origin.x + floor(rect.size.width/2 - imageSize.width/2),
+      rect = CGRectMakeRound(rect.origin.x + floor(rect.size.width/2 - imageSize.width/2),
                         rect.origin.y + floor(rect.size.height/2 - imageSize.height/2),
                         imageSize.width, imageSize.height);
     } else if (contentMode == UIViewContentModeScaleAspectFit) {
