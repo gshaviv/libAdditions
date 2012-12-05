@@ -106,4 +106,5 @@ enum {
 + (BOOL) currentSystemVersionIsLessThan:(short)major :(short)minor :(short)patch;
 + (NSString*) appDeviceUniqueIdentifier;
 + (int) platformCapabilities;
++ (BOOL) hasWidePhoneScreen;
 @end

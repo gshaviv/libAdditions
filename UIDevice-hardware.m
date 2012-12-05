@@ -53,6 +53,11 @@
 	return cd.userInterfaceIdiom == UIUserInterfaceIdiomPad;
 }
 
++ (BOOL) hasWidePhoneScreen {
+    UIDevice *cd = [UIDevice currentDevice];
+	return cd.userInterfaceIdiom == UIUserInterfaceIdiomPhone && [[UIScreen mainScreen] applicationFrame].size.height > 500;
+}
+
 + (NSString*) platform {
     return [[UIDevice currentDevice] platform];
 }
