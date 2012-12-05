@@ -114,25 +114,18 @@
     
     NSMutableString *tmpString = [NSMutableString string];
     
-    for (NSUInteger i = 0; i<[self length]; i++)
-    {
+    for (NSUInteger i = 0; i<[self length]; i++) {
         unichar oneChar = [self characterAtIndex:i];
-        
+
         NSString *subKey = [self substringWithRange:NSMakeRange(i, 1)];
         NSString *entity = entityReverseLookup[subKey];
-        
-        if (entity)
-        {
+
+        if (entity) {
             [tmpString appendString:entity];
-        }
-        else
-        {
-            if (oneChar<=255)
-            {
+        } else {
+            if (oneChar<128) {
                 [tmpString appendFormat:@"%C", oneChar];
-            }
-            else
-            {
+            } else {
                 [tmpString appendFormat:@"%%26%%23%d;", oneChar];
             }
         }
