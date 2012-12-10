@@ -114,31 +114,40 @@
     
     NSMutableString *tmpString = [NSMutableString string];
     
-    for (NSUInteger i = 0; i<[self length]; i++)
-    {
+    for (NSUInteger i = 0; i<[self length]; i++) {
         unichar oneChar = [self characterAtIndex:i];
-        
+
         NSString *subKey = [self substringWithRange:NSMakeRange(i, 1)];
         NSString *entity = entityReverseLookup[subKey];
-        
-        if (entity)
-        {
+
+        if (entity) {
             [tmpString appendString:entity];
-        }
-        else
-        {
-            if (oneChar<=255)
-            {
+        } else {
+            if (oneChar<128) {
                 [tmpString appendFormat:@"%C", oneChar];
-            }
-            else
-            {
+            } else {
                 [tmpString appendFormat:@"%%26%%23%d;", oneChar];
             }
         }
     }
     
     return tmpString;
+}
+
+- (NSString*) stringByStrippingHTMLTags {
+    NSString *htmlStripped = nil;
+    @autoreleasepool {
+        static NSRegularExpression *tagEx = nil;
+        static NSRegularExpression *spaceEx = nil;
+        if (!tagEx) {
+            tagEx = [NSRegularExpression regularExpressionWithPattern:@"< *(\\/?)([-A-Za-z0-9._]+) *(.*?)(\\/?)>" options:NSRegularExpressionCaseInsensitive error:nil];
+            spaceEx = [NSRegularExpression regularExpressionWithPattern:@"  +" options:0 error:nil];
+        }
+        NSString *brStripped = [self stringByReplacingOccurrencesOfString:@"<br/>" withString:@" "];
+        htmlStripped = [tagEx stringByReplacingMatchesInString:brStripped options:NSRegularExpressionCaseInsensitive range:NSRangeMake(0, brStripped.length) withTemplate:@""];
+        htmlStripped = [spaceEx stringByReplacingMatchesInString:htmlStripped options:0 range:NSRangeMake(0, htmlStripped.length) withTemplate:@" "];
+    }
+    return htmlStripped;
 }
 
 
