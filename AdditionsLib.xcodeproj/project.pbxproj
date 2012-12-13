@@ -104,6 +104,10 @@
 		E4CD2C3111F9FFD800D6C250 /* NSMutableArrayStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableArrayStack.m; sourceTree = SOURCE_ROOT; };
 		E4CE131B150CC5C6004FD83B /* UIButton+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Additions.h"; sourceTree = "<group>"; };
 		E4CE131C150CC5C6004FD83B /* UIButton+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Additions.m"; path = "Headers/UIButton+Additions.m"; sourceTree = "<group>"; };
+		E4DD8D4C1679C4520050A8E4 /* coverShade@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coverShade@2x.png"; sourceTree = "<group>"; };
+		E4DD8D4D1679C4520050A8E4 /* coverShade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coverShade.png; sourceTree = "<group>"; };
+		E4DD8D4F1679C4C40050A8E4 /* coverShadeFromBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coverShadeFromBottom.png; sourceTree = "<group>"; };
+		E4DD8D501679C4C40050A8E4 /* coverShadeFromBottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coverShadeFromBottom@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,10 @@
 		E42519FC11F9ED6800A98111 /* Additions */ = {
 			isa = PBXGroup;
 			children = (
+				E4DD8D4F1679C4C40050A8E4 /* coverShadeFromBottom.png */,
+				E4DD8D501679C4C40050A8E4 /* coverShadeFromBottom@2x.png */,
+				E4DD8D4C1679C4520050A8E4 /* coverShade@2x.png */,
+				E4DD8D4D1679C4520050A8E4 /* coverShade.png */,
 				E404B0271592345C009F4FC9 /* BlockActionSheet.m */,
 				E4CBFCF11536B0A30007E3AF /* BlockAlertView.m */,
 				E4CE131C150CC5C6004FD83B /* UIButton+Additions.m */,
