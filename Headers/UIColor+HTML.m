@@ -12,7 +12,7 @@ static NSDictionary *colorLookup = nil;
         sscanf([hex UTF8String], "%x",&color);
         float red = ((color>>16) & 0xFF) / 255.;
         float green = ((color>>8) & 0xff) / 255.;
-        float blue = (color & 0xff) / 255.;;   
+        float blue = (color & 0xff) / 255.;   
         return [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
 	} else if ([hex length] == 3) {
         unsigned int color;
@@ -21,6 +21,14 @@ static NSDictionary *colorLookup = nil;
         float green = ((color>>4) & 0xf) / 15.;
         float blue = (color & 0xf) / 15.;;   
         return [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
+    } else if ([hex length] == 8) {
+        unsigned int color;
+        sscanf([hex UTF8String], "%x",&color);
+        float red = ((color>>24) & 0xFF) / 255.;
+        float green = ((color>>16) & 0xff) / 255.;
+        float blue = ((color>>8) & 0xff) / 255.;
+        float alpha = (color & 0xff) / 255.; 
+        return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
     }
 	return nil;
 }
