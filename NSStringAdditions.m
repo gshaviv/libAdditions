@@ -7,7 +7,7 @@
 //
 
 #import "NSStringAdditions.h"
-
+#import "CGGeometryAdditions.h"
 @implementation NSString (Additions)
 
 - (int) hexValue {

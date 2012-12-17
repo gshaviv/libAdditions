@@ -13,16 +13,20 @@ static int level = 0;
 @implementation UIApplication (NetworkActivity)
 
 + (void) startNetworkActivity {
-	if (++level == 1) {
-		[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-	}
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (++level == 1) {
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+        }
+    });
 }
 
 + (void) endNetworkActivity {
+    dispatch_async(dispatch_get_main_queue(), ^{
 	if (--level < 0) level = 0;
 	if (level == 0) {
 		[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;		
 	}
+    });
 }
 
 + (void) resetNetworkActivity {
