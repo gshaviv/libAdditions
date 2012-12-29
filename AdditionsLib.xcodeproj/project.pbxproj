@@ -383,6 +383,7 @@
 					"$(ARCHS_STANDARD_32_BIT)",
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
 				DSTROOT = /tmp/AdditionsLib.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AdditionsLib_Prefix.pch;
@@ -406,6 +407,7 @@
 					"$(ARCHS_STANDARD_32_BIT)",
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
 				DSTROOT = /tmp/AdditionsLib.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AdditionsLib_Prefix.pch;
@@ -444,6 +446,7 @@
 					"$(ARCHS_STANDARD_32_BIT)",
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
 				DSTROOT = /tmp/AdditionsLib.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AdditionsLib_Prefix.pch;
