@@ -42,6 +42,7 @@
 - (void) setShadowColor:(UIColor*)webColor;
 - (void) setShadowOpacity:(NSString*)number;
 - (void) setShadowRadius:(NSNumber*)number;
+- (void) setAngle:(NSNumber*)degrees;
 @end
 
 #ifdef QUARTZADDITIONS

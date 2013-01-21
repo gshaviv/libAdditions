@@ -244,6 +244,10 @@ CGSize sizeThatFitsKeepingAspectRatio(CGSize originalSize, CGSize sizeToFit)
     return nil;
 }
 
+- (void) setAngle:(NSNumber*)degrees {
+    self.transform = CGAffineTransformMakeRotation([degrees floatValue]/180.*M_PI);
+}
+
 
 - (void) makeScrollViewGestureRecognizersRequireFail:(UIGestureRecognizer*)toFail {
 	if ([self isKindOfClass:[UIScrollView class]]) {
