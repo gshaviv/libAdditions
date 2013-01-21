@@ -17,4 +17,5 @@
 + (void) setDateFormat:(NSString*)format;
 + (void) setDateFormatTimezone:(NSTimeZone*)timezone;
 - (NSString*) stringValue;
+- (NSString*) relativeTimeString;
 @end
