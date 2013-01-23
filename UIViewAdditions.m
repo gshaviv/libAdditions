@@ -52,6 +52,13 @@ CGSize sizeThatFitsKeepingAspectRatio(CGSize originalSize, CGSize sizeToFit)
 - (void) setShadowRadius:(NSNumber*)number {
     self.layer.shadowRadius = [number floatValue];
 }
+- (void) setResizable:(NSString*)insets {
+    if ([self isKindOfClass:[UIImageView class]]) {
+        UIImageView *iself = (UIImageView*)self;
+        UIEdgeInsets caps = UIEdgeInsetsFromString(insets);
+        iself.image = [iself.image resizableImageWithCapInsets:caps];
+    }
+}
 
 - (CGFloat)left {
 	return self.frame.origin.x;
