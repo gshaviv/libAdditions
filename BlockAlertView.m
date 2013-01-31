@@ -18,6 +18,7 @@
     self = [super initWithTitle:title message:message delegate:self cancelButtonTitle:cancelButton otherButtonTitles:nil];
     if (self) {
         self.blocksArray = [NSMutableArray array];
+        if (!cancelBlock) cancelBlock = ^{};
         [self.blocksArray addObject:[cancelBlock copy]];
     }
     return self;
