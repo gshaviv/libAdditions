@@ -280,7 +280,7 @@
 		E42519F711F9ED6800A98111 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "LitePoint Corp.";
 			};
 			buildConfigurationList = E42519FA11F9ED6800A98111 /* Build configuration list for PBXProject "AdditionsLib" */;
