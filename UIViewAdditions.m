@@ -34,8 +34,12 @@ CGSize sizeThatFitsKeepingAspectRatio(CGSize originalSize, CGSize sizeToFit)
 - (void) setBorderWidth:(NSNumber*)width {
     self.layer.borderWidth = [width floatValue];
 }
-- (void) setBorderColor:(NSString*)webColor {
+- (void) setBorderColor:(id)webColor {
+    if ([webColor isKindOfClass:[UIColor class]]) {
+        self.layer.borderColor = [webColor CGColor];
+    } else {
     self.layer.borderColor = [UIColor colorWithHTMLName:webColor].CGColor;
+    }
 }
 - (void) setShadowOffset:(CGSize)offset {
     self.layer.shadowOffset = offset;
