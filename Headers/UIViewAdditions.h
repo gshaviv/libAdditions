@@ -37,7 +37,7 @@
 - (void) makeScrollViewGestureRecognizersRequireViewToFail:(UIView*)toFail;
 - (void) setCornerRadius:(NSNumber*)rad;
 - (void) setBorderWidth:(NSNumber*)width;
-- (void) setBorderColor:(NSString*)webColor;
+- (void) setBorderColor:(id)webColor;
 - (void) setShadowOffset:(CGSize)offset;
 - (void) setShadowColor:(UIColor*)webColor;
 - (void) setShadowOpacity:(NSString*)number;

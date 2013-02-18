@@ -48,9 +48,15 @@
  */
 
 + (BOOL) isIPad {
-	UIDevice *cd = [UIDevice currentDevice];
-	if (![cd respondsToSelector:@selector(userInterfaceIdiom)]) return NO;
-	return cd.userInterfaceIdiom == UIUserInterfaceIdiomPad;
+    static BOOL isIpad = NO;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        UIDevice *cd = [UIDevice currentDevice];
+        if ([cd respondsToSelector:@selector(userInterfaceIdiom)]) {
+            isIpad = (cd.userInterfaceIdiom == UIUserInterfaceIdiomPad);
+        }
+    });
+    return isIpad;
 }
 
 + (BOOL) hasWidePhoneScreen {
