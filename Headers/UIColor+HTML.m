@@ -19,7 +19,7 @@ static NSDictionary *colorLookup = nil;
         sscanf([hex UTF8String], "%x",&color);
         float red = ((color>>8) & 0xF) / 15.;
         float green = ((color>>4) & 0xf) / 15.;
-        float blue = (color & 0xf) / 15.;;   
+        float blue = (color & 0xf) / 15.;   
         return [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
     } else if ([hex length] == 8) {
         unsigned int color;
