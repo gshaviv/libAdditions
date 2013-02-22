@@ -38,7 +38,7 @@
 - (NSDictionary*)dictionaryFromQueryUsingEncoding: (NSStringEncoding)encoding { 
     NSUInteger queryStart;
 	NSCharacterSet* delimiterSet = [NSCharacterSet characterSetWithCharactersInString:@"&;?"] ;
-    if ((queryStart = [self rangeOfCharacterFromSet:delimiterSet].location) == NSNotFound) {
+    if ((queryStart = [self rangeOfString:@"?"].location) == NSNotFound) {
         queryStart = 0;
     } else {
         queryStart += 1;
