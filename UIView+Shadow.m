@@ -3,6 +3,27 @@
 #import "UIView+Shadow.h"
 #import <objc/runtime.h>
 
+static UIBezierPath* bezierPathWithCurvedShadow(CGRect rect, CGFloat curve ,CGFloat offset) {
+	UIBezierPath *path = [UIBezierPath bezierPath];
+
+	CGPoint topLeft		 = rect.origin;
+	CGPoint bottomLeft	 = CGPointMake(0.0, CGRectGetHeight(rect)+offset);
+	CGPoint bottomMiddle = CGPointMake(CGRectGetWidth(rect)/2, CGRectGetHeight(rect)-curve);
+	CGPoint bottomRight	 = CGPointMake(CGRectGetWidth(rect), CGRectGetHeight(rect)+offset);
+	CGPoint topRight	 = CGPointMake(CGRectGetWidth(rect), 0.0);
+
+	[path moveToPoint:topLeft];
+	[path addLineToPoint:bottomLeft];
+	[path addQuadCurveToPoint:bottomRight
+				 controlPoint:bottomMiddle];
+	[path addLineToPoint:topRight];
+	[path addLineToPoint:topLeft];
+	[path closePath];
+
+	return path;
+}
+
+
 @implementation UIView (Shadow)
 
 static char COLOR_KEY;
@@ -23,6 +44,11 @@ static char OPACITY_KEY;
 
 	objc_setAssociatedObject(self, &COLOR_KEY, color, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 	objc_setAssociatedObject(self, &OPACITY_KEY, @(opacity), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (void) addCurvedShadowWithOffset:(CGFloat)offset curve:(CGFloat)curve radius:(CGFloat)radius color:(UIColor*)color opacity:(CGFloat)opacity {
+    UIBezierPath *path = bezierPathWithCurvedShadow(self.bounds, curve, offset);
+    [self addShadowWithcolor:color offset:CGSizeMake(0, radius/2.) radius:radius opacity:opacity path:path];
 }
 
 
@@ -79,5 +105,10 @@ static char OPACITY_KEY;
 	
 	CFRelease(newShadowPath);
 }
+
+//static const CGFloat offset = 10.0;
+//static const CGFloat curve = 5.0;
+
+
 
 @end

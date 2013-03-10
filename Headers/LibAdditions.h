@@ -28,6 +28,7 @@
 #import "BlockActionSheet.h"
 #import "UIColor+HTML.h"
 #import "UIView+Shadow.h"
+#import "NSObject+AttachObject.h"
 
 #define DocumentsDirectory ((NSString*)[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0])
 #define LibraryDirectory [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0]
