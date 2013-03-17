@@ -21,6 +21,14 @@ static inline CGPoint CGPointDiff(CGPoint p1, CGPoint p0) {
 	return CGPointMake(p1.x-p0.x, p1.y-p0.y);
 }
 
+static inline CGPoint CGPointSum(CGPoint p1, CGPoint p0) {
+	return CGPointMake(p1.x+p0.x, p1.y+p0.y);
+}
+
+static inline CGRect CGRectScale(CGRect rect, CGFloat xScale, CGFloat yScale) {
+    return CGRectMake(rect.origin.x * xScale, rect.origin.y * yScale, rect.size.width * xScale, rect.size.height * yScale);
+}
+
 #define NSRangeMake(loc,len) NSMakeRange(loc,len)
 
 static inline NSRange NSRangeMakeFromStartToEnd(NSUInteger start, NSUInteger end) {
