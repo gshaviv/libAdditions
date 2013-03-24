@@ -18,14 +18,14 @@ Version: 1.0
 {
     NSString *message = [NSString stringWithFormat:@"%@",[error localizedDescription]];
 #ifdef _DEBUG
-	LogError(@"Error: %@", [error localizedDescription]);
+//	LogError(@"Error: %@", [error localizedDescription]);
 	NSArray* detailedErrors = [error userInfo][@"NSDetailedErrors"];
 	if(detailedErrors && [detailedErrors count] > 0) {
 		for(NSError* detailedError in detailedErrors) {
-			LogError(@"DetailedError: %@", [detailedError userInfo]);
+//			LogError(@"DetailedError: %@", [detailedError userInfo]);
 		}
 	} else {
-		LogError(@"%@", error );
+//		LogError(@"%@", error );
 	}
 #endif
 	if ([[error domain] isEqualToString:NSURLErrorDomain]) {
