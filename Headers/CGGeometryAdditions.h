@@ -38,6 +38,10 @@ static inline NSRange NSRangeMakeFromStartToEnd(NSUInteger start, NSUInteger end
     return range;
 }
 
+static inline BOOL NSRangeContainsValue(NSRange range, NSInteger value) {
+    return range.location <= value && value < range.location + range.length;
+}
+
 static inline float distanceBetweenPoints(CGPoint p1, CGPoint p2) {
     float x = p1.x - p2.x;
     float y = p1.y - p2.y;
