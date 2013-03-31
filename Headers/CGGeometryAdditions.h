@@ -10,7 +10,7 @@
 #import <math.h>
 
 static inline  CGRect CGRectMakeWithCenterAndSize(CGPoint center, CGSize size) {
-	return CGRectMake(center.x - size.width/2., center.y - size.height/2., size.width, size.height);
+	return CGRectMake(rintf(center.x - size.width/2.), rintf(center.y - size.height/2.), size.width, size.height);
 }
 
 static inline  CGRect CGRectMakeWithCxCyWH(float cx, float cy, float width, float height) {
