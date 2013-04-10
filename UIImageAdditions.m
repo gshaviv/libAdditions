@@ -104,7 +104,10 @@
 }
 
 - (UIImage*)imageWithSize:(CGSize)size contentMode:(UIViewContentMode)contentMode {
-    //	UIGraphicsBeginImageContext(CGSizeMake(width, height));
+    if (contentMode == UIViewContentModeScaleAspectFit) {
+        float scale = MIN(size.width / (float)self.size.width, size.height / (float)self.size.height);
+        size = CGSizeMake(rintf(self.size.width * scale), rintf(self.size.height * scale));
+    }
     UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);
     [self drawInRect:CGRectMake(0, 0, size.width, size.height) contentMode:contentMode];
 	UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
