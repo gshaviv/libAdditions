@@ -6,6 +6,7 @@
 - (void)addShadowWithcolor:(UIColor *)color offset:(CGSize)offset radius:(CGFloat)radius opacity:(CGFloat)opacity;
 - (void) addCurvedShadowWithOffset:(CGFloat)offset curve:(CGFloat)curve radius:(CGFloat)radius color:(UIColor*)color opacity:(CGFloat)opacity;
 - (void)updateShadowPath;
+- (void) addCurvedShadowWithRightOffset:(CGFloat)offsetR leftOffsset:(CGFloat)offsetL curve:(CGFloat)curve radius:(CGFloat)radius color:(UIColor*)color opacity:(CGFloat)opacity;
 
 - (void)removeShadow;
 - (void)restoreShadow;

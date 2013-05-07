@@ -35,6 +35,8 @@
 		E4A7A87E11FA028A008FAF55 /* LibAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A87D11FA028A008FAF55 /* LibAdditions.h */; };
 		E4AA8F1412F861C700D08289 /* NSCoderGSA.h in Headers */ = {isa = PBXBuildFile; fileRef = E4AA8F1012F861C700D08289 /* NSCoderGSA.h */; };
 		E4AA8F1512F861C700D08289 /* NSCoderGSA.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AA8F1112F861C700D08289 /* NSCoderGSA.m */; };
+		E4C5BAAF1708548D00D9C905 /* UIView+Shadow.h in Headers */ = {isa = PBXBuildFile; fileRef = E4C5BAAE1708548D00D9C905 /* UIView+Shadow.h */; };
+		E4C5BAB1170854A000D9C905 /* UIView+Shadow.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C5BAB0170854A000D9C905 /* UIView+Shadow.m */; };
 		E4CBFCF21536B0A30007E3AF /* BlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CBFCF11536B0A30007E3AF /* BlockAlertView.m */; };
 		E4CBFCF61536B0B10007E3AF /* BlockAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = E4CBFCF51536B0B10007E3AF /* BlockAlertView.h */; };
 		E4CD2C0711F9FDB200D6C250 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BE411F9FDB200D6C250 /* Alert.m */; };
@@ -53,8 +55,6 @@
 		E4CD2C3311F9FFD800D6C250 /* NSMutableArrayStack.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2C3111F9FFD800D6C250 /* NSMutableArrayStack.m */; };
 		E4CE131D150CC5C6004FD83B /* UIButton+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4CE131B150CC5C6004FD83B /* UIButton+Additions.h */; };
 		E4CE131F150CC5C6004FD83B /* UIButton+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CE131C150CC5C6004FD83B /* UIButton+Additions.m */; };
-		E4DFC9FB16E77854005B1B85 /* CALayer+KGShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = E4DFC9FA16E77854005B1B85 /* CALayer+KGShadow.h */; };
-		E4DFC9FD16E77867005B1B85 /* CALayer+KGShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DFC9FC16E77867005B1B85 /* CALayer+KGShadow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +88,8 @@
 		E4A7A87D11FA028A008FAF55 /* LibAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibAdditions.h; sourceTree = "<group>"; };
 		E4AA8F1012F861C700D08289 /* NSCoderGSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCoderGSA.h; sourceTree = "<group>"; };
 		E4AA8F1112F861C700D08289 /* NSCoderGSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCoderGSA.m; sourceTree = "<group>"; };
+		E4C5BAAE1708548D00D9C905 /* UIView+Shadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Shadow.h"; sourceTree = "<group>"; };
+		E4C5BAB0170854A000D9C905 /* UIView+Shadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Shadow.m"; sourceTree = "<group>"; };
 		E4CBFCF11536B0A30007E3AF /* BlockAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockAlertView.m; sourceTree = "<group>"; };
 		E4CBFCF51536B0B10007E3AF /* BlockAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockAlertView.h; sourceTree = "<group>"; };
 		E4CD2BE411F9FDB200D6C250 /* Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alert.m; sourceTree = SOURCE_ROOT; };
@@ -110,8 +112,6 @@
 		E4DD8D4D1679C4520050A8E4 /* coverShade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coverShade.png; sourceTree = "<group>"; };
 		E4DD8D4F1679C4C40050A8E4 /* coverShadeFromBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coverShadeFromBottom.png; sourceTree = "<group>"; };
 		E4DD8D501679C4C40050A8E4 /* coverShadeFromBottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coverShadeFromBottom@2x.png"; sourceTree = "<group>"; };
-		E4DFC9FA16E77854005B1B85 /* CALayer+KGShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+KGShadow.h"; sourceTree = "<group>"; };
-		E4DFC9FC16E77867005B1B85 /* CALayer+KGShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+KGShadow.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +141,7 @@
 		E42519FC11F9ED6800A98111 /* Additions */ = {
 			isa = PBXGroup;
 			children = (
-				E4DFC9FC16E77867005B1B85 /* CALayer+KGShadow.m */,
+				E4C5BAB0170854A000D9C905 /* UIView+Shadow.m */,
 				E4DD8D4F1679C4C40050A8E4 /* coverShadeFromBottom.png */,
 				E4DD8D501679C4C40050A8E4 /* coverShadeFromBottom@2x.png */,
 				E4DD8D4C1679C4520050A8E4 /* coverShade@2x.png */,
@@ -198,7 +198,7 @@
 		E4A7A85611FA0219008FAF55 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				E4DFC9FA16E77854005B1B85 /* CALayer+KGShadow.h */,
+				E4C5BAAE1708548D00D9C905 /* UIView+Shadow.h */,
 				E422166515FB3AA70011CF83 /* UIColor+HTML.m */,
 				E422166615FB3AA70011CF83 /* UIColor+HTML.h */,
 				E404B0261592345C009F4FC9 /* BlockActionSheet.h */,
@@ -265,7 +265,7 @@
 				E4CBFCF61536B0B10007E3AF /* BlockAlertView.h in Headers */,
 				E404B0281592345C009F4FC9 /* BlockActionSheet.h in Headers */,
 				E422166815FB3AA70011CF83 /* UIColor+HTML.h in Headers */,
-				E4DFC9FB16E77854005B1B85 /* CALayer+KGShadow.h in Headers */,
+				E4C5BAAF1708548D00D9C905 /* UIView+Shadow.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +341,7 @@
 				E4CBFCF21536B0A30007E3AF /* BlockAlertView.m in Sources */,
 				E404B0291592345C009F4FC9 /* BlockActionSheet.m in Sources */,
 				E422166715FB3AA70011CF83 /* UIColor+HTML.m in Sources */,
-				E4DFC9FD16E77867005B1B85 /* CALayer+KGShadow.m in Sources */,
+				E4C5BAB1170854A000D9C905 /* UIView+Shadow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
