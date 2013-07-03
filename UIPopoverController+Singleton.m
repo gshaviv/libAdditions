@@ -26,7 +26,7 @@ static UIPopoverController *visibleController;
 }
 
 + (UIPopoverController*) visibleController {
-    if (visibleController && [visibleController isPopoverVisible]) {
+    if (visibleController && [visibleController isKindOfClass:[UIPopoverController class]] && [visibleController isPopoverVisible]) {
         return visibleController;
     } else {
         visibleController = nil;

@@ -12,7 +12,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface PopoverController
+@interface PopoverController : UIPopoverController
 + (UIPopoverController*) visibleController;
 + (void) presentPopover:(UIPopoverController*)popoverController fromRect:(CGRect)rect inView:(UIView *)view permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections animated:(BOOL)animated;
 + (void) presentPopover:(UIPopoverController*)popoverController fromBarButtonItem:(UIBarButtonItem *)item permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections animated:(BOOL)animated;
