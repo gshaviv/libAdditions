@@ -30,12 +30,13 @@
 		E4A7A87611FA0219008FAF55 /* UIDevice-hardware.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A86311FA0219008FAF55 /* UIDevice-hardware.h */; };
 		E4A7A87711FA0219008FAF55 /* UIImageAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A86411FA0219008FAF55 /* UIImageAdditions.h */; };
 		E4A7A87811FA0219008FAF55 /* UIImageViewAddtions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A86511FA0219008FAF55 /* UIImageViewAddtions.h */; };
-		E4A7A87911FA0219008FAF55 /* UIPopoverController+Singleton.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A86611FA0219008FAF55 /* UIPopoverController+Singleton.h */; };
 		E4A7A87A11FA0219008FAF55 /* UIScrollViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A86711FA0219008FAF55 /* UIScrollViewAdditions.h */; };
 		E4A7A87B11FA0219008FAF55 /* UIViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A86811FA0219008FAF55 /* UIViewAdditions.h */; };
 		E4A7A87E11FA028A008FAF55 /* LibAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A87D11FA028A008FAF55 /* LibAdditions.h */; };
 		E4AA8F1412F861C700D08289 /* NSCoderGSA.h in Headers */ = {isa = PBXBuildFile; fileRef = E4AA8F1012F861C700D08289 /* NSCoderGSA.h */; };
 		E4AA8F1512F861C700D08289 /* NSCoderGSA.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AA8F1112F861C700D08289 /* NSCoderGSA.m */; };
+		E4C5BAAF1708548D00D9C905 /* UIView+Shadow.h in Headers */ = {isa = PBXBuildFile; fileRef = E4C5BAAE1708548D00D9C905 /* UIView+Shadow.h */; };
+		E4C5BAB1170854A000D9C905 /* UIView+Shadow.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C5BAB0170854A000D9C905 /* UIView+Shadow.m */; };
 		E4CBFCF21536B0A30007E3AF /* BlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CBFCF11536B0A30007E3AF /* BlockAlertView.m */; };
 		E4CBFCF61536B0B10007E3AF /* BlockAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = E4CBFCF51536B0B10007E3AF /* BlockAlertView.h */; };
 		E4CD2C0711F9FDB200D6C250 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BE411F9FDB200D6C250 /* Alert.m */; };
@@ -49,7 +50,6 @@
 		E4CD2C1C11F9FDB200D6C250 /* UIDevice-hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BF911F9FDB200D6C250 /* UIDevice-hardware.m */; };
 		E4CD2C1E11F9FDB200D6C250 /* UIImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BFB11F9FDB200D6C250 /* UIImageAdditions.m */; };
 		E4CD2C2011F9FDB200D6C250 /* UIImageViewAddtions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BFD11F9FDB200D6C250 /* UIImageViewAddtions.m */; };
-		E4CD2C2211F9FDB200D6C250 /* UIPopoverController+Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2BFF11F9FDB200D6C250 /* UIPopoverController+Singleton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E4CD2C2411F9FDB200D6C250 /* UIScrollViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2C0111F9FDB200D6C250 /* UIScrollViewAdditions.m */; };
 		E4CD2C2611F9FDB200D6C250 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2C0311F9FDB200D6C250 /* UIViewAdditions.m */; };
 		E4CD2C3311F9FFD800D6C250 /* NSMutableArrayStack.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CD2C3111F9FFD800D6C250 /* NSMutableArrayStack.m */; };
@@ -61,8 +61,8 @@
 		E404B0261592345C009F4FC9 /* BlockActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockActionSheet.h; sourceTree = "<group>"; };
 		E404B0271592345C009F4FC9 /* BlockActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlockActionSheet.m; path = Headers/BlockActionSheet.m; sourceTree = "<group>"; };
 		E41E710714359A7F00585262 /* ObjectToDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectToDictionary.h; path = Headers/ObjectToDictionary.h; sourceTree = "<group>"; };
-		E41E710814359A7F00585262 /* ObjectToDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectToDictionary.m; sourceTree = "<group>"; };
-		E422166515FB3AA70011CF83 /* UIColor+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HTML.m"; sourceTree = "<group>"; };
+		E41E710814359A7F00585262 /* ObjectToDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ObjectToDictionary.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		E422166515FB3AA70011CF83 /* UIColor+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "UIColor+HTML.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E422166615FB3AA70011CF83 /* UIColor+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HTML.h"; sourceTree = "<group>"; };
 		E4251A0311F9ED6800A98111 /* libAdditions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAdditions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4251A0511F9ED6800A98111 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,12 +83,13 @@
 		E4A7A86311FA0219008FAF55 /* UIDevice-hardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice-hardware.h"; sourceTree = "<group>"; };
 		E4A7A86411FA0219008FAF55 /* UIImageAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageAdditions.h; sourceTree = "<group>"; };
 		E4A7A86511FA0219008FAF55 /* UIImageViewAddtions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewAddtions.h; sourceTree = "<group>"; };
-		E4A7A86611FA0219008FAF55 /* UIPopoverController+Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPopoverController+Singleton.h"; sourceTree = "<group>"; };
 		E4A7A86711FA0219008FAF55 /* UIScrollViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScrollViewAdditions.h; sourceTree = "<group>"; };
 		E4A7A86811FA0219008FAF55 /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
 		E4A7A87D11FA028A008FAF55 /* LibAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibAdditions.h; sourceTree = "<group>"; };
 		E4AA8F1012F861C700D08289 /* NSCoderGSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCoderGSA.h; sourceTree = "<group>"; };
 		E4AA8F1112F861C700D08289 /* NSCoderGSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCoderGSA.m; sourceTree = "<group>"; };
+		E4C5BAAE1708548D00D9C905 /* UIView+Shadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Shadow.h"; sourceTree = "<group>"; };
+		E4C5BAB0170854A000D9C905 /* UIView+Shadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Shadow.m"; sourceTree = "<group>"; };
 		E4CBFCF11536B0A30007E3AF /* BlockAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockAlertView.m; sourceTree = "<group>"; };
 		E4CBFCF51536B0B10007E3AF /* BlockAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockAlertView.h; sourceTree = "<group>"; };
 		E4CD2BE411F9FDB200D6C250 /* Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alert.m; sourceTree = SOURCE_ROOT; };
@@ -102,12 +103,15 @@
 		E4CD2BF911F9FDB200D6C250 /* UIDevice-hardware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice-hardware.m"; sourceTree = SOURCE_ROOT; };
 		E4CD2BFB11F9FDB200D6C250 /* UIImageAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageAdditions.m; sourceTree = SOURCE_ROOT; };
 		E4CD2BFD11F9FDB200D6C250 /* UIImageViewAddtions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewAddtions.m; sourceTree = SOURCE_ROOT; };
-		E4CD2BFF11F9FDB200D6C250 /* UIPopoverController+Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPopoverController+Singleton.m"; sourceTree = SOURCE_ROOT; };
 		E4CD2C0111F9FDB200D6C250 /* UIScrollViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIScrollViewAdditions.m; sourceTree = SOURCE_ROOT; };
 		E4CD2C0311F9FDB200D6C250 /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = SOURCE_ROOT; };
 		E4CD2C3111F9FFD800D6C250 /* NSMutableArrayStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableArrayStack.m; sourceTree = SOURCE_ROOT; };
 		E4CE131B150CC5C6004FD83B /* UIButton+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Additions.h"; sourceTree = "<group>"; };
 		E4CE131C150CC5C6004FD83B /* UIButton+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Additions.m"; path = "Headers/UIButton+Additions.m"; sourceTree = "<group>"; };
+		E4DD8D4C1679C4520050A8E4 /* coverShade@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coverShade@2x.png"; sourceTree = "<group>"; };
+		E4DD8D4D1679C4520050A8E4 /* coverShade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coverShade.png; sourceTree = "<group>"; };
+		E4DD8D4F1679C4C40050A8E4 /* coverShadeFromBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coverShadeFromBottom.png; sourceTree = "<group>"; };
+		E4DD8D501679C4C40050A8E4 /* coverShadeFromBottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coverShadeFromBottom@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,11 @@
 		E42519FC11F9ED6800A98111 /* Additions */ = {
 			isa = PBXGroup;
 			children = (
+				E4C5BAB0170854A000D9C905 /* UIView+Shadow.m */,
+				E4DD8D4F1679C4C40050A8E4 /* coverShadeFromBottom.png */,
+				E4DD8D501679C4C40050A8E4 /* coverShadeFromBottom@2x.png */,
+				E4DD8D4C1679C4520050A8E4 /* coverShade@2x.png */,
+				E4DD8D4D1679C4520050A8E4 /* coverShade.png */,
 				E404B0271592345C009F4FC9 /* BlockActionSheet.m */,
 				E4CBFCF11536B0A30007E3AF /* BlockAlertView.m */,
 				E4CE131C150CC5C6004FD83B /* UIButton+Additions.m */,
@@ -152,7 +161,6 @@
 				E4CD2BF911F9FDB200D6C250 /* UIDevice-hardware.m */,
 				E4CD2BFB11F9FDB200D6C250 /* UIImageAdditions.m */,
 				E4CD2BFD11F9FDB200D6C250 /* UIImageViewAddtions.m */,
-				E4CD2BFF11F9FDB200D6C250 /* UIPopoverController+Singleton.m */,
 				E4CD2C0111F9FDB200D6C250 /* UIScrollViewAdditions.m */,
 				E4CD2C0311F9FDB200D6C250 /* UIViewAdditions.m */,
 				E491C4B01269A126001FF7F1 /* UIColorLibraryAdditions.m */,
@@ -190,6 +198,7 @@
 		E4A7A85611FA0219008FAF55 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				E4C5BAAE1708548D00D9C905 /* UIView+Shadow.h */,
 				E422166515FB3AA70011CF83 /* UIColor+HTML.m */,
 				E422166615FB3AA70011CF83 /* UIColor+HTML.h */,
 				E404B0261592345C009F4FC9 /* BlockActionSheet.h */,
@@ -210,7 +219,6 @@
 				E4A7A86311FA0219008FAF55 /* UIDevice-hardware.h */,
 				E4A7A86411FA0219008FAF55 /* UIImageAdditions.h */,
 				E4A7A86511FA0219008FAF55 /* UIImageViewAddtions.h */,
-				E4A7A86611FA0219008FAF55 /* UIPopoverController+Singleton.h */,
 				E4A7A86711FA0219008FAF55 /* UIScrollViewAdditions.h */,
 				E4A7A86811FA0219008FAF55 /* UIViewAdditions.h */,
 				E4583AF312917024007F0577 /* dispatchShortcuts.h */,
@@ -246,7 +254,6 @@
 				E4A7A87611FA0219008FAF55 /* UIDevice-hardware.h in Headers */,
 				E4A7A87711FA0219008FAF55 /* UIImageAdditions.h in Headers */,
 				E4A7A87811FA0219008FAF55 /* UIImageViewAddtions.h in Headers */,
-				E4A7A87911FA0219008FAF55 /* UIPopoverController+Singleton.h in Headers */,
 				E4A7A87A11FA0219008FAF55 /* UIScrollViewAdditions.h in Headers */,
 				E4A7A87B11FA0219008FAF55 /* UIViewAdditions.h in Headers */,
 				E4A7A87E11FA028A008FAF55 /* LibAdditions.h in Headers */,
@@ -258,6 +265,7 @@
 				E4CBFCF61536B0B10007E3AF /* BlockAlertView.h in Headers */,
 				E404B0281592345C009F4FC9 /* BlockActionSheet.h in Headers */,
 				E422166815FB3AA70011CF83 /* UIColor+HTML.h in Headers */,
+				E4C5BAAF1708548D00D9C905 /* UIView+Shadow.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +295,7 @@
 		E42519F711F9ED6800A98111 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "LitePoint Corp.";
 			};
 			buildConfigurationList = E42519FA11F9ED6800A98111 /* Build configuration list for PBXProject "AdditionsLib" */;
@@ -323,7 +331,6 @@
 				E4CD2C1C11F9FDB200D6C250 /* UIDevice-hardware.m in Sources */,
 				E4CD2C1E11F9FDB200D6C250 /* UIImageAdditions.m in Sources */,
 				E4CD2C2011F9FDB200D6C250 /* UIImageViewAddtions.m in Sources */,
-				E4CD2C2211F9FDB200D6C250 /* UIPopoverController+Singleton.m in Sources */,
 				E4CD2C2411F9FDB200D6C250 /* UIScrollViewAdditions.m in Sources */,
 				E4CD2C2611F9FDB200D6C250 /* UIViewAdditions.m in Sources */,
 				E4CD2C3311F9FFD800D6C250 /* NSMutableArrayStack.m in Sources */,
@@ -334,6 +341,7 @@
 				E4CBFCF21536B0A30007E3AF /* BlockAlertView.m in Sources */,
 				E404B0291592345C009F4FC9 /* BlockActionSheet.m in Sources */,
 				E422166715FB3AA70011CF83 /* UIColor+HTML.m in Sources */,
+				E4C5BAB1170854A000D9C905 /* UIView+Shadow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,12 +391,14 @@
 					"$(ARCHS_STANDARD_32_BIT)",
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
 				DSTROOT = /tmp/AdditionsLib.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AdditionsLib_Prefix.pch;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Additions;
 				SKIP_INSTALL = YES;
@@ -405,12 +415,14 @@
 					"$(ARCHS_STANDARD_32_BIT)",
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
 				DSTROOT = /tmp/AdditionsLib.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AdditionsLib_Prefix.pch;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Additions;
 				SKIP_INSTALL = YES;
@@ -442,12 +454,14 @@
 					"$(ARCHS_STANDARD_32_BIT)",
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
 				DSTROOT = /tmp/AdditionsLib.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AdditionsLib_Prefix.pch;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Additions;
 				SKIP_INSTALL = YES;

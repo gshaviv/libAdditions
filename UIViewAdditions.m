@@ -34,8 +34,12 @@ CGSize sizeThatFitsKeepingAspectRatio(CGSize originalSize, CGSize sizeToFit)
 - (void) setBorderWidth:(NSNumber*)width {
     self.layer.borderWidth = [width floatValue];
 }
-- (void) setBorderColor:(NSString*)webColor {
+- (void) setBorderColor:(id)webColor {
+    if ([webColor isKindOfClass:[UIColor class]]) {
+        self.layer.borderColor = [webColor CGColor];
+    } else {
     self.layer.borderColor = [UIColor colorWithHTMLName:webColor].CGColor;
+    }
 }
 - (void) setShadowOffset:(CGSize)offset {
     self.layer.shadowOffset = offset;
@@ -51,6 +55,13 @@ CGSize sizeThatFitsKeepingAspectRatio(CGSize originalSize, CGSize sizeToFit)
 }
 - (void) setShadowRadius:(NSNumber*)number {
     self.layer.shadowRadius = [number floatValue];
+}
+- (void) setResizable:(NSString*)insets {
+    if ([self isKindOfClass:[UIImageView class]]) {
+        UIImageView *iself = (UIImageView*)self;
+        UIEdgeInsets caps = UIEdgeInsetsFromString(insets);
+        iself.image = [iself.image resizableImageWithCapInsets:caps];
+    }
 }
 
 - (CGFloat)left {
@@ -242,6 +253,10 @@ CGSize sizeThatFitsKeepingAspectRatio(CGSize originalSize, CGSize sizeToFit)
         }
     }
     return nil;
+}
+
+- (void) setAngle:(NSNumber*)degrees {
+    self.transform = CGAffineTransformMakeRotation([degrees floatValue]/180.*M_PI);
 }
 
 
