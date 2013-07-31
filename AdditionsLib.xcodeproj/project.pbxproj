@@ -15,6 +15,8 @@
 		E422166815FB3AA70011CF83 /* UIColor+HTML.h in Headers */ = {isa = PBXBuildFile; fileRef = E422166615FB3AA70011CF83 /* UIColor+HTML.h */; };
 		E4251A0611F9ED6800A98111 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4251A0511F9ED6800A98111 /* Foundation.framework */; };
 		E4583AF412917024007F0577 /* dispatchShortcuts.h in Headers */ = {isa = PBXBuildFile; fileRef = E4583AF312917024007F0577 /* dispatchShortcuts.h */; };
+		E46F1F1117A450F00004DCB0 /* NSObject+AttachObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E43E877C17A44CC200D70629 /* NSObject+AttachObject.m */; };
+		E46F1F1217A450F50004DCB0 /* UIColor+CrossFade.m in Sources */ = {isa = PBXBuildFile; fileRef = E43E877D17A44CCC00D70629 /* UIColor+CrossFade.m */; };
 		E491C4B11269A126001FF7F1 /* UIColorLibraryAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E491C4AF1269A126001FF7F1 /* UIColorLibraryAdditions.h */; };
 		E491C4B21269A126001FF7F1 /* UIColorLibraryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E491C4B01269A126001FF7F1 /* UIColorLibraryAdditions.m */; };
 		E4A7A86A11FA0219008FAF55 /* Alert.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A7A85711FA0219008FAF55 /* Alert.h */; };
@@ -67,6 +69,10 @@
 		E4251A0311F9ED6800A98111 /* libAdditions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAdditions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4251A0511F9ED6800A98111 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E4251A0711F9ED6800A98111 /* AdditionsLib_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdditionsLib_Prefix.pch; sourceTree = "<group>"; };
+		E43E877A17A44CAC00D70629 /* NSObject+AttachObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+AttachObject.h"; sourceTree = "<group>"; };
+		E43E877B17A44CAC00D70629 /* UIColor+CrossFade.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+CrossFade.h"; sourceTree = "<group>"; };
+		E43E877C17A44CC200D70629 /* NSObject+AttachObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSObject+AttachObject.m"; path = "Headers/NSObject+AttachObject.m"; sourceTree = "<group>"; };
+		E43E877D17A44CCC00D70629 /* UIColor+CrossFade.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CrossFade.m"; sourceTree = "<group>"; };
 		E4583AF312917024007F0577 /* dispatchShortcuts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dispatchShortcuts.h; sourceTree = "<group>"; };
 		E491C4AF1269A126001FF7F1 /* UIColorLibraryAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColorLibraryAdditions.h; sourceTree = "<group>"; };
 		E491C4B01269A126001FF7F1 /* UIColorLibraryAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColorLibraryAdditions.m; sourceTree = "<group>"; };
@@ -141,6 +147,8 @@
 		E42519FC11F9ED6800A98111 /* Additions */ = {
 			isa = PBXGroup;
 			children = (
+				E43E877D17A44CCC00D70629 /* UIColor+CrossFade.m */,
+				E43E877C17A44CC200D70629 /* NSObject+AttachObject.m */,
 				E4C5BAB0170854A000D9C905 /* UIView+Shadow.m */,
 				E4DD8D4F1679C4C40050A8E4 /* coverShadeFromBottom.png */,
 				E4DD8D501679C4C40050A8E4 /* coverShadeFromBottom@2x.png */,
@@ -198,6 +206,8 @@
 		E4A7A85611FA0219008FAF55 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				E43E877A17A44CAC00D70629 /* NSObject+AttachObject.h */,
+				E43E877B17A44CAC00D70629 /* UIColor+CrossFade.h */,
 				E4C5BAAE1708548D00D9C905 /* UIView+Shadow.h */,
 				E422166515FB3AA70011CF83 /* UIColor+HTML.m */,
 				E422166615FB3AA70011CF83 /* UIColor+HTML.h */,
@@ -295,7 +305,7 @@
 		E42519F711F9ED6800A98111 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "LitePoint Corp.";
 			};
 			buildConfigurationList = E42519FA11F9ED6800A98111 /* Build configuration list for PBXProject "AdditionsLib" */;
@@ -320,10 +330,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E46F1F1217A450F50004DCB0 /* UIColor+CrossFade.m in Sources */,
 				E4CD2C0711F9FDB200D6C250 /* Alert.m in Sources */,
 				E4CD2C0A11F9FDB200D6C250 /* NSDateAdditions.m in Sources */,
 				E4CD2C0C11F9FDB200D6C250 /* NSDictionaryAdditions.m in Sources */,
 				E4CD2C0E11F9FDB200D6C250 /* NSInvocationForwardedConstruction.m in Sources */,
+				E46F1F1117A450F00004DCB0 /* NSObject+AttachObject.m in Sources */,
 				E4CD2C1411F9FDB200D6C250 /* NSNotificationCenterAdditions.m in Sources */,
 				E4CD2C1611F9FDB200D6C250 /* NSStringAdditions.m in Sources */,
 				E4CD2C1811F9FDB200D6C250 /* Swizzle.m in Sources */,
@@ -351,7 +363,6 @@
 		E4251A0811F9ED6800A98111 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -362,6 +373,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 			};
@@ -370,7 +382,6 @@
 		E4251A0911F9ED6800A98111 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = QUARTZADDITIONS;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
@@ -386,10 +397,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
-				);
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				DSTROOT = /tmp/AdditionsLib.dst;
@@ -410,10 +417,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
-				);
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				DSTROOT = /tmp/AdditionsLib.dst;
@@ -433,7 +436,6 @@
 		E4D85013146582B3003FAC13 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = QUARTZADDITIONS;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
@@ -449,10 +451,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
-				);
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				DSTROOT = /tmp/AdditionsLib.dst;
