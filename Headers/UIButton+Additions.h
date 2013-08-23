@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^ActionBlock)(id sender);
+
 @interface UIButton (Additions)
 - (UIBarButtonItem*) barItem;
+- (void) onEvent:(UIControlEvents)event performBlock:(ActionBlock)block;
+
 @end

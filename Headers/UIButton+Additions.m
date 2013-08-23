@@ -8,6 +8,10 @@
 
 #import "UIButton+Additions.h"
 #import "UIViewAdditions.h"
+#import "NSObject+AttachObject.h"
+
+static const char *touchUpInside = 0;
+
 
 @implementation UIButton (Additions)
 - (UIBarButtonItem*) barItem {
@@ -32,5 +36,23 @@
             break;
         }
     }
+}
+
+- (void) onEvent:(UIControlEvents)event performBlock:(ActionBlock)block {
+    switch (event) {
+        case UIControlEventTouchUpInside:
+            [self setAssociatedObject:block forKey:touchUpInside policy:AssociationPolicyCopy];
+            [self addTarget:self action:@selector(didTouchUpInside) forControlEvents:event];
+            break;
+
+        default:
+            NSAssert(NO, @"Event not implemented yet");
+            break;
+    }
+}
+
+- (void) didTouchUpInside {
+    ActionBlock block = [self associatedObjectForKey:touchUpInside];
+    block(self);
 }
 @end
