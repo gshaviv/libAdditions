@@ -287,11 +287,11 @@
     if (ver.major == 0) {
         NSArray *a = [[[UIDevice currentDevice] systemVersion] componentsSeparatedByString:@"."];
         if (a.count > 0)
-            ver.major = [a[0] intValue];
+            ver.major = [[a objectAtIndex:0] intValue];
         if (a.count > 1)
-            ver.minor = [a[1] intValue];
+            ver.minor = [[a objectAtIndex:1] intValue];
         if (a.count > 2)
-            ver.patch = [a[2] intValue];
+            ver.patch = [[a objectAtIndex:2] intValue];
     }
     
     
